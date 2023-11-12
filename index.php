@@ -147,7 +147,7 @@
    </h3>
    <div class="mbr-row mbr-justify-content-center">
       <div class="mbr-col-lg-8 mbr-col-md-12" data-form-type="formoid">
-         <form class="mbr-form mbr-justify-content-center" method="post" action="">
+         <form class="mbr-form mbr-justify-content-center" method="post" action="email.php">
             <div id="submit-success" style="display:none;color:green; text-align:center;margin-bottom:1%;">
             <?php echo $msg; ?>
             </div>

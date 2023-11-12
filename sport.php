@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html amp>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -2630,7 +2629,7 @@
                         <strong>Sito ufficiale:</strong> <a href="https://www.camminodeiborghisilenti.it/">https://www.camminodeiborghisilenti.it/</a> 
                         <br>
                         <div slot="text-align: center">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PaeA5Vj7xOE?si=iwmaY1TXIRS0R8AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/PaeA5Vj7xOE?si=iwmaY1TXIRS0R8AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </p>
                 </div>
