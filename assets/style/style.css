@@ -5,3 +5,15 @@
 .cursor {
     cursor: pointer;
 }
+
+.captcha {
+    margin-left: 25% !important;
+    width: 50%;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    color: #4c4a4b;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

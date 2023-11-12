@@ -11,28 +11,28 @@ if (array_key_exists('email_user', $_POST)) {
     $mail->SMTPAuth = true;
     $mail->Username = 'contatti@civitelladellago.com';
     $mail->Password = 'Pippi1989NA?';
-    $mail->setFrom('contatti@civitelladellago.com', 'Mr. Snuffles');
+    $mail->setFrom('contatti@civitelladellago.com', 'Civitella del lago');
     $mail->addAddress('pierpaolo.pdd@gmail.com', 'Receiver Name');
     if ($mail->addReplyTo($_POST['email_user'], $_POST['nome'])) {
-        $mail->Subject = 'PHPMailer contact form';
+        $mail->Subject = 'Civitella del Lago contact form';
         $mail->isHTML(false);
         $mail->Body = <<<EOT
             Email: {$_POST['email_user']}
             Name: {$_POST['nome']}
-            Message: {$_POST['message_user']}
+            Message: {$_POST['messaggio_user']}
 EOT;
         if (!$mail->send()) {
-            $msg = 'Sorry, something went wrong. Please try again later.';
+            $msg = 'Siamo spiacenti, qualcosa è andato storto. Riprova più tardi';
         } else {
-            $msg = 'Message sent! Thanks for contacting us.';
+            $msg = 'Messaggio inviato. Ti ringraziamo per averci contattato!';
         }
     } else {
         $msg = 'Share it with us!';
     }
 }
 else{
-    $msg = 'Error!';
+    $msg = 'Siamo spiacenti, qualcosa è andato storto. Riprova più tardi';
 }
-header("Location: /index.html", true, 301);  
-exit();  
+header("Location: /index.php", true, 301);  
+exit(); 
 ?>

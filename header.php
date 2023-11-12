@@ -1,23 +1,239 @@
-<!DOCTYPE html>
-<html amp>
-
 <head>
-    <!-- Site made with Mobirise Website Builder v4.9.7, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="assets/images/logo1.png" type="image/x-icon">
-    <meta name="description" content="">
+    <meta name="description"
+        content="Sito non ufficiale di Civitella Del Lago, piccolo borgo umbro nei pressi di Orvieto. Informazioni a 360 gradi su storia, servizi, attività sportive, trekking e cammini">
+    <meta name="keywords"
+        content="borgo, Umbria, Civitella del Lago, Montecchio, Civitella de' pazzi, Scoppieto, Orvieto, Baschi, Todi, Cammino dei Borghi silenti">
+    <meta name="author" content="Pierpaolo Di Dato">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
-    <title>tour</title>
-    <link rel="canonical" href="tour.html">
+    <title>Civitella del Lago</title>
+    <link rel="canonical" href="./">
+    <!--Adsense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3177939731250769"
+        crossorigin="anonymous"></script>
+    <!-- Flag CSS -->
+    <link href="vendor/flag/assets/docs.css" rel="stylesheet">
+    <link href="vendor/flag/css/flag-icon.css" rel="stylesheet">
+    <link href="assets/style/style.css" rel="stylesheet">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @media screen and (max-width: 500px) {
+            .captcha {
+                flex-direction: column;
+            }
+
+            .text {
+                margin: .5em !important;
+                text-align: center;
+            }
+
+            .logo {
+                align-self: center !important;
+            }
+
+            .spinner {
+                margin: 2em .5em .5em .5em !important;
+            }
+        }
+
+        .text {
+            font-size: 1.45em;
+            margin-right: 1em;
+            font-family: Roboto;
+        }
+
+        .spinner {
+            position: relative;
+            width: 2em;
+            height: 2em;
+            display: flex;
+            margin: 2em 1em;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        input[type="checkbox"]+.checkmark {
+            display: inline-block;
+            width: 2em;
+            height: 2em;
+            background-color: #fcfcfc;
+            border: 2.5px solid #c3c3c3;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]+.checkmark span {
+            content: '';
+            position: relative;
+            margin-top: -3px;
+            transform: rotate(45deg);
+            width: .75em;
+            height: 1.2em;
+            opacity: 0;
+        }
+
+        input[type="checkbox"]+.checkmark>span:after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #029f56;
+        }
+
+        input[type="checkbox"]+.checkmark>span:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 3px;
+            bottom: 0;
+            right: 0;
+            background-color: #029f56;
+        }
+
+        input[type="checkbox"]:checked+.checkmark {
+            animation: 2s spin forwards;
+        }
+
+        input[type="checkbox"]:checked+.checkmark>span {
+            animation: 1s fadein 1.9s forwards;
+        }
+
+        input[type="checkbox"]:checked+.checkmark>span:after {
+            animation: .3s bottomslide 2s forwards;
+        }
+
+        input[type="checkbox"]:checked+.checkmark>span:before {
+            animation: .5s rightslide 2.2s forwards;
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bottomslide {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes rightslide {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: flex-end;
+            margin: 0.5em 1em;
+        }
+
+        .logo img {
+            height: 2em;
+            width: 2em;
+        }
+
+        .logo p {
+            color: #9d9ba7;
+            margin: 0;
+            font-size: 1em;
+            font-weight: 700;
+            margin: .4em 0 .2em 0;
+        }
+
+        .logo small {
+            color: #9d9ba7;
+            margin: 0;
+            font-size: .8em;
+        }
+
+        @keyframes spin {
+            10% {
+                width: 0;
+                height: 0;
+                border-width: 6px;
+            }
+
+            30% {
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                border-width: 1em;
+                transform: rotate(0deg);
+                border-color: rgb(199, 218, 245);
+            }
+
+            50% {
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                border-width: 4px;
+                border-color: rgb(199, 218, 245);
+                border-right-color: rgb(89, 152, 239);
+            }
+
+            70% {
+                border-width: 4px;
+                border-color: rgb(199, 218, 245);
+                border-right-color: rgb(89, 152, 239);
+            }
+
+            90% {
+                border-width: 4px;
+            }
+
+            100% {
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                transform: rotate(720deg);
+                border-color: transparent;
+            }
+        }
+
+        ::selection {
+            background-color: transparent;
+            color: teal;
+        }
+
+        ::-moz-selection {
+            background-color: transparent;
+            color: teal;
         }
 
         @-webkit-keyframes -amp-start {
@@ -83,7 +299,17 @@
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic"
         rel="stylesheet">
+
     <style amp-custom>
+        .targetBorder.selected {
+            border: 3px solid #000;
+        }
+
+        .flag-wrapper {
+            width: 10% !important;
+            margin-right: 3%;
+        }
+
         div,
         span,
         h1,
@@ -2222,65 +2448,220 @@
             }
         }
 
-        .cid-rpJ9jNq8yr {
-            padding-top: 60px;
-            padding-bottom: 60px;
-            background-image: url("assets/images/f-714971-1024x768.jpg");
+        .cid-rpffBrvvly {
+            background-image: url("assets/images/whatsapp-image-2019-04-23-at-18.20.32-1200x1600.jpg");
         }
 
-        .cid-rpJ9jNq8yr .mbr-title {
-            padding-bottom: 1rem;
-        }
-
-        .cid-rpJ9jNq8yr .mbr-section-btn {
-            padding-top: 1.5rem;
-        }
-
-        .cid-rpJ9kCktHG {
+        .cid-rpfcx7Uhzg {
             padding-top: 30px;
             padding-bottom: 30px;
-            background-color: #ffffff;
+            background-color: #efefef;
         }
 
-        .cid-rpJ9kCktHG .mbr-text {
-            padding: 2rem 0;
+        .cid-rpfcx7Uhzg .text-block {
+            margin: auto;
         }
 
-        .cid-rpJ9mikJi6 {
-            padding-top: 60px;
-            padding-bottom: 60px;
-            background-color: #ffffff;
-        }
-
-        .cid-rpJ9mikJi6 .counter-container ul {
-            margin-bottom: 0;
-        }
-
-        .cid-rpJ9mikJi6 .counter-container ul li {
-            color: inherit;
-            padding-bottom: 1rem;
-            list-style: none;
-        }
-
-        .cid-rpJ9mikJi6 .counter-container ul li:before {
-            box-sizing: inherit;
-            position: absolute;
-            left: 0px;
-            padding-top: 3px;
-            content: '';
-            display: inline-block;
+        .cid-rpfcx7Uhzg amp-img {
             text-align: center;
-            margin: 10px 15px;
-            line-height: 20px;
-            transition: all .2s;
-            color: #ffffff;
-            background: #4ea2e3;
-            width: 10px;
-            height: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .cid-rpfcx7Uhzg .image-block {
+                padding-right: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .cid-rpfcx7Uhzg .image-block {
+                padding-bottom: 1rem;
+            }
+        }
+
+        .cid-rpfcx7Uhzg .btn {
+            margin: .4rem 4px;
+        }
+
+        .cid-rpfcBxpkNz {
+            padding-top: 90px;
+            padding-bottom: 90px;
+            background-color: #ffffff;
+        }
+
+        .cid-rpfcBxpkNz .mbr-section-btn {
+            margin: 0.5rem;
+        }
+
+        .cid-rpfcBxpkNz .mbr-section-btn>*,
+        .cid-rpfcBxpkNz textarea,
+        .cid-rpfcBxpkNz input {
+            margin: 0;
+        }
+
+        .cid-rpfcBxpkNz .mbr-form {
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+        }
+
+        .cid-rpfcBxpkNz .mbr-row {
+            margin-top: 2rem;
+        }
+
+        .cid-rpfcBxpkNz textarea,
+        .cid-rpfcBxpkNz input,
+        .cid-rpfcBxpkNz .area {
+            width: 100%;
+        }
+
+        .cid-rpfcBxpkNz .area,
+        .cid-rpfcBxpkNz .split-row {
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .cid-rpfcBxpkNz .fieldset {
+                display: flex;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .cid-rpfcBxpkNz .fieldset .split-row {
+                flex: 1 1 30%;
+            }
+        }
+
+        .cid-rpfcBxpkNz input,
+        .cid-rpfcBxpkNz textarea {
+            color: #000000;
+            border: 1px solid #767676;
+            background: #ffffff;
+        }
+
+        .cid-rpfcBxpkNz input:hover,
+        .cid-rpfcBxpkNz textarea:hover,
+        .cid-rpfcBxpkNz input:focus,
+        .cid-rpfcBxpkNz textarea:focus {
+            border-color: #4ea2e3;
+        }
+
+        .cid-rpfcBxpkNz input::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .cid-rpfcBxpkNz input::-moz-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .cid-rpfcBxpkNz textarea::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .cid-rpfcBxpkNz textarea::-moz-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .cid-rpfctvQ7fY {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #e0e0e0;
+        }
+
+        .cid-rpfctvQ7fY .carousel,
+        .cid-rpfctvQ7fY .slider-box {
+            height: 300px;
+        }
+
+        .cid-rpfctvQ7fY .slider-box {
+            margin-top: 2rem;
+        }
+
+        .cid-rpfctvQ7fY .amp-carousel-button {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            border-radius: 0;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+        }
+
+        .cid-rpfctvQ7fY amp-img,
+        .cid-rpfctvQ7fY img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .cid-rpfctvQ7fY .carousel-img {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .cid-rpfctvQ7fY .carousel-img {
+                max-width: 450px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .cid-rpfctvQ7fY .carousel-img {
+                margin: 0;
+            }
+
+            .cid-rpfctvQ7fY .amp-carousel-button {
+                display: none;
+            }
+        }
+
+        .cid-rpfctvQ7fY amp-img:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #4ea2e3;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+        .cid-rpfctvQ7fY .icon-wrap {
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+        .cid-rpfctvQ7fY .icon-wrap .amp-iconfont {
+            font-size: 2rem;
+            width: 2rem;
+            color: #ffffff;
+        }
+
+        .cid-rpfctvQ7fY .carousel-img:hover amp-img {
+            cursor: pointer;
+        }
+
+        .cid-rpfctvQ7fY .carousel-img:hover amp-img:after {
+            opacity: 0.5;
+        }
+
+        .cid-rpfctvQ7fY .carousel-img:hover .icon-wrap {
+            opacity: 1;
+        }
+
+        .cid-rpJbLc49Yx {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            background-color: #ffffff;
+        }
+
+        .cid-rpJbLc49Yx .facebook-wrapper {
+            margin: auto;
         }
 
         .cid-rpfcEPB5FO {
@@ -2310,155 +2691,10 @@
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox"
+        src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-position-observer"
-        src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
 
 
 </head>
-
-<body>
-    <div id="top-page"></div> <amp-animation id="showScrollToTopAnim" layout="nodisplay">
-        <script
-            type="application/json">                                             {                                                 "duration": "200ms",                                                 "fill": "both",                                                 "iterations": "1",                                                 "direction": "alternate",                                                 "animations": [                                                     {                                                         "selector": "#scrollToTopButton",                                                         "keyframes": [                                                             { "opacity": "0.4", "visibility": "visible" }                                                         ]                                                     }                                                 ]                                             }                                             </script>
-    </amp-animation> <amp-animation id="hideScrollToTopAnim" layout="nodisplay">
-        <script
-            type="application/json">                                             {                                                 "duration": "200ms",                                                 "fill": "both",                                                 "iterations": "1",                                                 "direction": "alternate",                                                 "animations": [                                                     {                                                         "selector": "#scrollToTopButton",                                                         "keyframes": [                                                             { "opacity": "0", "visibility": "hidden" }                                                         ]                                                     }                                                 ]                                             }                                             </script>
-    </amp-animation>
-    <div id="scrollToTopMarker"> <amp-position-observer
-            on="enter:hideScrollToTopAnim.start; exit:showScrollToTopAnim.start" layout="nodisplay">
-        </amp-position-observer> </div><amp-sidebar id="sidebar" class="cid-rpfciQyPtf" layout="nodisplay" side="right">
-        <div class="builder-sidebar" id="builder-sidebar">
-            <button on="tap:sidebar.close" class="close-sidebar">
-                <span></span>
-                <span></span>
-            </button>
-
-
-            <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="sport.html">
-                        Sport e trekking</a>
-                </li>
-                <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it">
-                        Ovo Pinto</a></li>
-            </ul>
-
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                    href="index.html#contacts2-5">
-                    Contattaci</a></div>
-        </div>
-    </amp-sidebar>
-
-    <section class="menu horizontal-menu cid-rpfciQyPtf" id="menu2-0">
-
-
-        <nav class="navbar navbar-dropdown navbar-expand-lg">
-            <div class="brand">
-                <span class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" width="65%;" /></a>
-                </span>
-
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
-                    <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="sport.html">
-                            Sport e trekking</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
-                            target="blank">
-                            Ovo Pinto</a></li>
-                </ul>
-
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                        href="index.html#contacts2-5">
-                        Contattaci</a></div>
-            </div>
-
-            <button on="tap:sidebar.toggle" class="ampstart-btn hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-
-        <!-- AMP plug -->
-
-
-    </section>
-
-    <section class="engine">
-        <a href="https://mobirise.info/u">bootstrap responsive templates</a>
-    </section>
-    <section class="mbr-section content19 cid-rpJ9jNq8yr" id="content19-n">
-
-        <div class="mbr-container">
-            <h2 class="mbr-title align-center mbr-fonts-style mbr-bold mbr-white display-1">
-                Tour virtuale</h2>
-            <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style mbr-white display-5">
-                <em>Visita il bellissimo borgo interagendo con la mappa.</em>
-            </h3>
-            <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="#">START TOUR</a></div>
-        </div>
-    </section>
-    <section class="content4 mbr-section article cid-rpJ9kCktHG" id="content4-o">
-        <div class="container">
-            <div class="mbr-text align-center mbr-fonts-style mbr-light display-2">
-                Pagina in allestimento. Ci scusiamo per il disagio.
-                <br>
-                <br>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Under_Construction.jpeg" width="20%">
-            </div>
-            <iframe allowfullscreen src="examples/panorama_image.html"></iframe>
-        </div>
-    </section>
-
-    <section class="content7 mbr-section cid-rpJ9mikJi6" id="content7-p">
-
-    </section>
-
-    <section class="footer1 cid-rpfcEPB5FO" id="footer1-e">
-
-
-
-        <div class="container">
-            <div class="mbr-col-sm-12 align-center mbr-white">
-                <p class="mbr-text mbr-fonts-style display-7">
-                    © Copyright
-                    <script>document.write(new Date().getFullYear())</script> Civitella del lago - All Rights
-                    Reserved<br>
-                    email: <span class="text-primary"><strong>contatti@civitelladellago.com</strong></span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <input name="cookieData" type="hidden"
-        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.html'>cookie policy</a>.">
-    <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)"> <a class="scroll-to-top-arrow"></a>
-    </button>
-    <script src="vendor/panolens/build/panolens.min.js"></script>
-    <script>
-        const panorama = new PANOLENS.ImagePanorama('vendor/panolens/asset/field.jpg');
-        const viewer = new PANOLENS.Viewer();
-        viewer.add(panorama);
-    </script>
-</body>
-
-</html>
