@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html amp>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,245 +10,17 @@
     <meta name="keywords"
         content="borgo, Umbria, Civitella del Lago, Montecchio, Civitella de' pazzi, Scoppieto, Orvieto, Baschi, Todi, Cammino dei Borghi silenti">
     <meta name="author" content="Pierpaolo Di Dato">
-    <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
-    <title>Civitella del Lago</title>
-    <link rel="canonical" href="./">
-    <!--Adsense-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3177939731250769"
-        crossorigin="anonymous"></script>
-    <!-- Flag CSS -->
     <link href="vendor/flag/assets/docs.css" rel="stylesheet">
     <link href="vendor/flag/css/flag-icon.css" rel="stylesheet">
-    <link href="assets/style/style.css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
+    <title>Civitella del Lago</title>
+    <link rel="canonical" href="sport.php">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
-
-        .captcha {
-            margin-left: 25% !important;
-            width: 50%;
-            background-color: #f9f9f9;
-            border: 1px solid black;
-            color: #4c4a4b;
-            margin: 0.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media screen and (max-width: 500px) {
-            .captcha {
-                flex-direction: column;
-            }
-
-            .text {
-                margin: .5em !important;
-                text-align: center;
-            }
-
-            .logo {
-                align-self: center !important;
-            }
-
-            .spinner {
-                margin: 2em .5em .5em .5em !important;
-            }
-        }
-
-        .text {
-            font-size: 1.45em;
-            margin-right: 1em;
-            font-family: Roboto;
-        }
-
-        .spinner {
-            position: relative;
-            width: 2em;
-            height: 2em;
-            display: flex;
-            margin: 2em 1em;
-            align-items: center;
-            justify-content: center;
-        }
-
-        input[type="checkbox"] {
-            position: absolute;
-            opacity: 0;
-            z-index: -1;
-        }
-
-        input[type="checkbox"]+.checkmark {
-            display: inline-block;
-            width: 2em;
-            height: 2em;
-            background-color: #fcfcfc;
-            border: 2.5px solid #c3c3c3;
-            border-radius: 3px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        input[type="checkbox"]+.checkmark span {
-            content: '';
-            position: relative;
-            margin-top: -3px;
-            transform: rotate(45deg);
-            width: .75em;
-            height: 1.2em;
-            opacity: 0;
-        }
-
-        input[type="checkbox"]+.checkmark>span:after {
-            content: '';
-            position: absolute;
-            display: block;
-            height: 3px;
-            bottom: 0;
-            left: 0;
-            background-color: #029f56;
-        }
-
-        input[type="checkbox"]+.checkmark>span:before {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 3px;
-            bottom: 0;
-            right: 0;
-            background-color: #029f56;
-        }
-
-        input[type="checkbox"]:checked+.checkmark {
-            animation: 2s spin forwards;
-        }
-
-        input[type="checkbox"]:checked+.checkmark>span {
-            animation: 1s fadein 1.9s forwards;
-        }
-
-        input[type="checkbox"]:checked+.checkmark>span:after {
-            animation: .3s bottomslide 2s forwards;
-        }
-
-        input[type="checkbox"]:checked+.checkmark>span:before {
-            animation: .5s rightslide 2.2s forwards;
-        }
-
-        @keyframes fadein {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes bottomslide {
-            0% {
-                width: 0;
-            }
-
-            100% {
-                width: 100%;
-            }
-        }
-
-        @keyframes rightslide {
-            0% {
-                height: 0;
-            }
-
-            100% {
-                height: 100%;
-            }
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-self: flex-end;
-            margin: 0.5em 1em;
-        }
-
-        .logo img {
-            height: 2em;
-            width: 2em;
-        }
-
-        .logo p {
-            color: #9d9ba7;
-            margin: 0;
-            font-size: 1em;
-            font-weight: 700;
-            margin: .4em 0 .2em 0;
-        }
-
-        .logo small {
-            color: #9d9ba7;
-            margin: 0;
-            font-size: .8em;
-        }
-
-        @keyframes spin {
-            10% {
-                width: 0;
-                height: 0;
-                border-width: 6px;
-            }
-
-            30% {
-                width: 0;
-                height: 0;
-                border-radius: 50%;
-                border-width: 1em;
-                transform: rotate(0deg);
-                border-color: rgb(199, 218, 245);
-            }
-
-            50% {
-                width: 2em;
-                height: 2em;
-                border-radius: 50%;
-                border-width: 4px;
-                border-color: rgb(199, 218, 245);
-                border-right-color: rgb(89, 152, 239);
-            }
-
-            70% {
-                border-width: 4px;
-                border-color: rgb(199, 218, 245);
-                border-right-color: rgb(89, 152, 239);
-            }
-
-            90% {
-                border-width: 4px;
-            }
-
-            100% {
-                width: 2em;
-                height: 2em;
-                border-radius: 50%;
-                transform: rotate(720deg);
-                border-color: transparent;
-            }
-        }
-
-        ::selection {
-            background-color: transparent;
-            color: teal;
-        }
-
-        ::-moz-selection {
-            background-color: transparent;
-            color: teal;
         }
 
         @-webkit-keyframes -amp-start {
@@ -315,6 +88,10 @@
         rel="stylesheet">
 
     <style amp-custom>
+        .justify {
+            text-align: justify;
+        }
+
         .targetBorder.selected {
             border: 3px solid #000;
         }
@@ -2462,220 +2239,43 @@
             }
         }
 
-        .cid-rpffBrvvly {
-            background-image: url("assets/images/whatsapp-image-2019-04-23-at-18.20.32-1200x1600.jpg");
+        .cid-rpfkY1KvKw {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            background-image: url("assets/images/lago-di-corbara-1-1024x526.jpg");
         }
 
-        .cid-rpfcx7Uhzg {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            background-color: #efefef;
+        .cid-rpfkY1KvKw .mbr-title {
+            padding-bottom: 1rem;
         }
 
-        .cid-rpfcx7Uhzg .text-block {
-            margin: auto;
+        .cid-rpfkY1KvKw .mbr-section-btn {
+            padding-top: 1.5rem;
         }
 
-        .cid-rpfcx7Uhzg amp-img {
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .cid-rpfcx7Uhzg .image-block {
-                padding-right: 2rem;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .cid-rpfcx7Uhzg .image-block {
-                padding-bottom: 1rem;
-            }
-        }
-
-        .cid-rpfcx7Uhzg .btn {
-            margin: .4rem 4px;
-        }
-
-        .cid-rpfcBxpkNz {
-            padding-top: 90px;
-            padding-bottom: 90px;
+        .cid-rpfl8eOgZW {
+            padding-top: 60px;
+            padding-bottom: 60px;
             background-color: #ffffff;
         }
 
-        .cid-rpfcBxpkNz .mbr-section-btn {
-            margin: 0.5rem;
+        .cid-rpfl8eOgZW .mbr-text {
+            margin-bottom: 0;
         }
 
-        .cid-rpfcBxpkNz .mbr-section-btn>*,
-        .cid-rpfcBxpkNz textarea,
-        .cid-rpfcBxpkNz input {
+        .cid-rpfl8eOgZW .mbr-section-title {
             margin: 0;
         }
 
-        .cid-rpfcBxpkNz .mbr-form {
-            margin-left: -0.5rem;
-            margin-right: -0.5rem;
-        }
-
-        .cid-rpfcBxpkNz .mbr-row {
-            margin-top: 2rem;
-        }
-
-        .cid-rpfcBxpkNz textarea,
-        .cid-rpfcBxpkNz input,
-        .cid-rpfcBxpkNz .area {
-            width: 100%;
-        }
-
-        .cid-rpfcBxpkNz .area,
-        .cid-rpfcBxpkNz .split-row {
-            padding: 0.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .cid-rpfcBxpkNz .fieldset {
-                display: flex;
-                -webkit-flex-wrap: wrap;
-                flex-wrap: wrap;
-            }
-
-            .cid-rpfcBxpkNz .fieldset .split-row {
-                flex: 1 1 30%;
-            }
-        }
-
-        .cid-rpfcBxpkNz input,
-        .cid-rpfcBxpkNz textarea {
-            color: #000000;
-            border: 1px solid #767676;
-            background: #ffffff;
-        }
-
-        .cid-rpfcBxpkNz input:hover,
-        .cid-rpfcBxpkNz textarea:hover,
-        .cid-rpfcBxpkNz input:focus,
-        .cid-rpfcBxpkNz textarea:focus {
-            border-color: #4ea2e3;
-        }
-
-        .cid-rpfcBxpkNz input::-webkit-input-placeholder {
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        .cid-rpfcBxpkNz input::-moz-placeholder {
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        .cid-rpfcBxpkNz textarea::-webkit-input-placeholder {
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        .cid-rpfcBxpkNz textarea::-moz-placeholder {
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        .cid-rpfctvQ7fY {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            background-color: #e0e0e0;
-        }
-
-        .cid-rpfctvQ7fY .carousel,
-        .cid-rpfctvQ7fY .slider-box {
-            height: 300px;
-        }
-
-        .cid-rpfctvQ7fY .slider-box {
-            margin-top: 2rem;
-        }
-
-        .cid-rpfctvQ7fY .amp-carousel-button {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        .cid-rpfctvQ7fY amp-img,
-        .cid-rpfctvQ7fY img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: relative;
-        }
-
-        .cid-rpfctvQ7fY .carousel-img {
-            width: 100%;
-            height: 300px;
-            position: relative;
-        }
-
-        @media (min-width: 768px) {
-            .cid-rpfctvQ7fY .carousel-img {
-                max-width: 450px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .cid-rpfctvQ7fY .carousel-img {
-                margin: 0;
-            }
-
-            .cid-rpfctvQ7fY .amp-carousel-button {
-                display: none;
-            }
-        }
-
-        .cid-rpfctvQ7fY amp-img:after {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background-color: #4ea2e3;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .3s;
-        }
-
-        .cid-rpfctvQ7fY .icon-wrap {
-            width: 2rem;
-            height: 2rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            opacity: 0;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            transition: opacity .3s;
-        }
-
-        .cid-rpfctvQ7fY .icon-wrap .amp-iconfont {
-            font-size: 2rem;
-            width: 2rem;
-            color: #ffffff;
-        }
-
-        .cid-rpfctvQ7fY .carousel-img:hover amp-img {
-            cursor: pointer;
-        }
-
-        .cid-rpfctvQ7fY .carousel-img:hover amp-img:after {
-            opacity: 0.5;
-        }
-
-        .cid-rpfctvQ7fY .carousel-img:hover .icon-wrap {
-            opacity: 1;
-        }
-
-        .cid-rpJbLc49Yx {
+        .cid-rpJiGN8A35 {
             padding-top: 5rem;
             padding-bottom: 5rem;
             background-color: #ffffff;
         }
 
-        .cid-rpJbLc49Yx .facebook-wrapper {
+        .cid-rpJiGN8A35 .twitter-wrapper {
             margin: auto;
+            padding-top: 1rem;
         }
 
         .cid-rpfcEPB5FO {
@@ -2704,12 +2304,10 @@
     </style>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-position-observer"
+        src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-    <script async custom-element="amp-image-lightbox"
-        src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-
 
 </head>
 
@@ -2732,32 +2330,33 @@
 
             <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
+                    <a class="nav-link link text-primary display-7" href="storia.php">Storia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
+                    <a class="nav-link link text-primary display-7" href="servizi.php">Servizi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="sport.html">
+                    <a class="nav-link link text-primary display-7" href="sport.php">
                         Sport e trekking</a>
                 </li>
-                <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it">
+                <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
+                        target="blank">
                         Ovo Pinto</a></li>
             </ul>
 
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                    href="index.html#contacts2-5">
+                    href="index.php#contacts2-5">
                     Contattaci</a></div>
         </div>
     </amp-sidebar>
+    <section class="menu horizontal-menu cid-rpfciQyPtf" id="menu2-b">
 
-    <section class="menu horizontal-menu cid-rpfciQyPtf" id="menu2-0">
 
 
         <nav class="navbar navbar-dropdown navbar-expand-lg">
             <div class="brand">
                 <span class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" width="65%;" /></a>
+                    <a href="index.php"><img src="assets/images/logo.png" width="65%;" /></a>
                 </span>
 
             </div>
@@ -2765,13 +2364,13 @@
 
                 <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
+                        <a class="nav-link link text-primary display-7" href="storia.php">Storia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
+                        <a class="nav-link link text-primary display-7" href="servizi.php">Servizi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="sport.html">
+                        <a class="nav-link link text-primary display-7" href="sport.php">
                             Sport e trekking</a>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
@@ -2780,7 +2379,7 @@
                 </ul>
 
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                        href="index.html#contacts2-5">
+                        href="index.php#contacts2-5">
                         Contattaci</a></div>
             </div>
 
@@ -2791,389 +2390,254 @@
                 <span></span>
             </button>
         </nav>
+
+        <!-- AMP plug -->
+
+
     </section>
 
-    <section class="engine"><a href="https://mobirise.info/h">create a web page</a></section>
-    <section class="header1 cid-rpffBrvvly mbr-fullscreen" id="header1-8">
+    <section class="engine"><a href="https://mobirise.info/k">develop free website</a></section>
+    <section class="mbr-section content18 cid-rpfkY1KvKw" id="content18-g">
 
-        <div class="container">
-            <h1 class="mbr-section-title mbr-fonts-style align-right mbr-bold mbr-white display-1">
-                <strong>Civitella del Lago</strong>
-            </h1>
-            <h3 class="mbr-section-subtitle mbr-fonts-style align-right mbr-white mbr-light display-2">Storia, arte e
-                natura</h3>
+        <div class="mbr-container">
+            <h2 class="mbr-title align-center mbr-fonts-style mbr-bold mbr-white display-1">
+                Sport e trekking</h2>
+            <h3 class="mbr-section-subtitle align-center mbr-light  mbr-fonts-style mbr-white display-5"></h3>
 
-            <div class="mbr-section-btn align-right"><a class="btn btn-md btn-primary display-4" href="tour.html">Tour
-                    virtuale</a></div>
         </div>
-
     </section>
 
-    <section class="features10 cid-rpfcx7Uhzg" id="features10-4">
+    <section class="content2 mbr-section article cid-rpfl8eOgZW" id="content2-h">
+
+
 
         <div class="container">
             <div class="mbr-row mbr-justify-content-center">
-                <div class="image-block mbr-col-sm-12 mbr-col-md-6">
-                    <amp-img src="assets/images/civitella-del-lago-1046x640.jpg" layout="responsive" width="523"
-                        height="320" alt="Mobirise" class="mobirise-loader">
-                        <div placeholder="" class="placeholder">
-                            <div class="mobirise-spinner">
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </div>
-                        </div>
+                <div class="mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-8">
+                    <div class="container text-center" style="margin-top:3%;">
+                        <span id="flag1" class="col-md-1 col-sm-2 col-xs-3 center" style="width: 10%;"><span
+                                class="click flag-wrapper"><span
+                                    class="img-thumbnail flag flag-icon-background flag-icon-it targetBorder selected"
+                                    title="it" id="it"></span></span></span>
+                        <span id="flag2" class="col-md-1 col-sm-2 col-xs-3 center" style="width: 10%;"><span
+                                class="click flag-wrapper"><span
+                                    class="img-thumbnail flag flag-icon-background flag-icon-gb targetBorder" title="gb"
+                                    id="gb"></span></span></span>
 
-                    </amp-img>
-                </div>
-                <div class="text-block mbr-col-sm-12 mbr-col-md-6">
-                    <h3 class="mbr-section-title mbr-fonts-style align-left display-5">
-                        PERCHE' VISITARE IL BORGO</h3>
-                    <p class="mbr-fonts-style mbr-text align-left display-7">
-                        Perchè è un paesino immerso nel verde e nella pace delle colline umbre, a metà strada tra Todi
-                        ed Orvieto. Un luogo ideale per evadere dal caos delle grandi città e scoprire il benessere
-                        psico-fisico che il buon cibo, le belle passeggiate e l'aria pulita possono regalarti.
+                    </div>
+                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2">
+                        Trekking e passeggiate</h3>
+                    <p class="mbr-text mbr-fonts-style display-7 justify" id="trek1">Trekking e passeggiate possono
+                        sembrare poco invitanti durante la calda estate, ma in realtà sono molto piacevoli durante le
+                        ore più fresche del mattino e la sera. Vi sono numerosi sentieri e strade sterrate che possono
+                        essere percorse per tragitti tra i 45 minuti e le 3 ore. I sentieri sono indicati da mappe e
+                        segnaposti ed una mappa cartacea ben dettagliata è disponibile presso l'ufficio turistico ed i
+                        bar. Se avete una mountain bike con voi, non perdete l'occasione per un giro avventuruoso tra i
+                        boschi ed i campi attorno al lago. Nel periodo estivo si organizzano escursioni.<br>Per maggiori
+                        info: tel. 3311098798 &nbsp;- info@civitellarte.it<br><br>La camminata più interessante è quella
+                        è quella che conduce alla Pasquarella: cercate il cartello in legno con l'indicazione prima di
+                        arrivare a Scoppieto. Seguendo il sentiero tra gli oliveti giungerete ad una interesezione a T
+                        poco prima di una casa dove dovrete voltare a sinistra. Dopo circa 150 metri incontrerete gli
+                        scavi Romani di Scoppieto. La fornace di Scoppieto, individuata nel 1995, unica al mondo per
+                        l'importanza storica, è una fabbrica di ceramica finissima del I sec. d.C. La struttura lavorò
+                        per più di 100 anni producendo servizi di piatti, tazzine, ciotole e lucerne realizzati con il
+                        sigillo dei fratelli Lucius Zosimus e Publius avilius Zosimus, che lavorarono dal 14 al 75 d.C.
+                        commerciando poi grazie al Tevere sui mercati più importanti del Mediterraneo.<br>
+                        <br>
+                        I materiali rinveunti sono esposti nell'Antiquarium comunale di <strong>Baschi</strong>.
+                        Continuando lungo il sentiero si raggiunge un belvedere affacciato sulla gola del Tevere.
+                        Tornando indietro, proseguite fino agli scavi, ma invece di girare sulla destra verso la strada,
+                        seguite il sentiero tra gli Ulivi. Nei pressi di una casa recentemente estaurata, potrete godere
+                        di un'incantevole vista di Todi e in lontananza del <strong>Monte Subasio</strong> nei pressi di
+                        Assisi. Seguite il sentiero che vi riporterà verso Civitella sbucando alla Cappelletta di San
+                        Sebastiano nei pressi del cimitero.
+                        <br>
+                        <br>Il borgo è dotato di una moderna piscina immersa nel verde ubicata nei pressi del campo
+                        sportivo, appena fuori dal paesino, oltre il cimitero e sulla destra della cappella di San
+                        Sebastiano. E' aperta tutti i giorni da fine giugno ad inizio settembre(orario
+                        9-19).<br>L'impianto è dotato di camerini, docce, bar e solarium all'aperto. Potrete acquistare
+                        le cuffiette al bar nel caso in cui non le abbiate con voi e noleggiare lettini e sdraio. Se
+                        arrivate dopo le 14 l'entrata ha un prezzo ridotto. Il campo da tennis ed il campo da calcio si
+                        trovano nella stessa area. Il campo da tennis può essere prenotato al bar della piscina.
                     </p>
-                    <div class="mbr-section-btn align-left"><a class="btn btn-sm btn-primary display-4"
-                            href="servizi.html" target="_blank">Continua a leggere</a></div>
-                </div>
-                <div class="container text-center" style="margin-top:3%;">
-                    <span id="flag1" class="col-md-1 col-sm-2 col-xs-3 center" style="width: 10%;"><span
-                            class="click flag-wrapper"><span
-                                class="img-thumbnail flag flag-icon-background flag-icon-it targetBorder selected cursor"
-                                title="it" id="it"></span></span></span>
-                    <span id="flag2" class="col-md-1 col-sm-2 col-xs-3 center" style="width: 10%;"><span
-                            class="click flag-wrapper"><span
-                                class="img-thumbnail flag flag-icon-background flag-icon-gb targetBorder cursor"
-                                title="gb" id="gb"></span></span></span>
+                    <br>
+                    <h3 class="mbr-fonts-style mbr-light display-2">
+                        Città d'arte vicine</h3>
+                    <hr>
+                    <h5 class="mbr-fonts-style mbr-section-title mbr-light display-2">Orvieto</h5>
+                    <p class="mbr-text mbr-fonts-style display-7 justify" id="trek2">
+                        A distanza di 17 km da civitella, su un altopiano di tufo sorge l'antica città di
+                        <strong>Orvieto</strong>. Ai suoi piedi troverete Orvieto Scalo, un moderno quartiere tra la
+                        ferrovia e l'autostrada, con vari negozi, tra i quali il grande supermercato Coop ed un centro
+                        commerciale.<br>
+                        Per raggiungere la città vecchia potrete parcheggiare dietro la stazione e seguire i cartelli
+                        per la funicolare. Dalla fermata superiore della funicolare al centro dovrete camminare per un
+                        po' e prendere un piccolo bus. In alternativa, guidando attraverso la rotonda di Orvieto Scalo,
+                        potrete sostare al parcheggio Foro Boario e raggiungere la città vecchia con scale mobili ed
+                        ascensori.<br>
+                        Il centro storico di Orvieto ha due grandi piazze. Piazza del Duomo e Piazza del Popolo, dove il
+                        mercato viene tenuto Giovedì e Sabato mattina. La facciata del Duomo è un capolavoro unico, al
+                        pari degli affreschi del Signorelli nella Cappella di San Brizio al suo interno. Il mercato
+                        offre numerosi prodotti freschi in particolare il sabato. Tra i negozi affacciati sulla piazza
+                        troverete un pescivendolo, negozi di alimentari e prodotti tipici come il Carraro in Corso
+                        Cavour con il suo cinghiale impagliato in vetrina.
+                        <br>
+                        <hr>
+                    <h5 class="mbr-fonts-style mbr-section-title mbr-light display-2">Todi</h5>
+                    <p class="mbr-text mbr-fonts-style display-7 justify" id="trek3">
+                        Ci sono due vie per raggiungere Todi da Civitella. La prima è quella lungo il lago attraverso la
+                        gola del Tevere. La seconda è quella che segue la strada del campo sportivo, dalla quale avrete
+                        una visuale più ampia ed una vista panoramica di Todi.<br>
+                        Non è generalmente possibile guidare nella città vecchia e dovrete lasciare l'auto o alla Porta
+                        Orvietana o al parcheggio nei pressi della Chiesa si Santa Maria della Consolazione. Todi ha una
+                        tipica piazza medievale con una fantastica vista in tutte le direzioni. Un abitante locale disse
+                        tempo fa di preferire Todi, tipica cittadina in stile umbro, ad Orvieto, caratterizzata invece
+                        da tratti etruschi. Anche se le due culture finirono circa 2000 anni fa, la loro impronta è
+                        ancora ben visibile nelle menti dei suoi abitanti.
+                        <br>
+                    <h5 class="mbr-fonts-style mbr-section-title mbr-light display-2">Altre tappe</h5>
+                    <hr>
+                    <p class="mbr-text mbr-fonts-style display-7 justify" id="trek4">
+                        Nel caso vogliate andare a <strong>Roma</strong> potrete prendere un treno da Orvieto Scalo, che
+                        rappresenta un'alternativa più facile, veloce ed economica rispetto alla macchina. In genere il
+                        treno impiega circa un'ora per raggiungere la stazione di Termini nel cuore di Roma.<br>
+                        Anche <strong>Firenze</strong> è raggiungibile via treno in circa un'ora e mezza.
+                        <strong>Arezzo</strong>, il set del film 'La vita è bella' di Roberto Benigni, è a circa metà
+                        strada tra Orvieto e Firenze. <strong>Perugia</strong> invece è raggiungibile con la
+                        macchina(circa 60 km). Molto più grande di Todi ed Orvieto, offre numerose attrazioni, musei,
+                        opere d'arte e negozi. Nelle vicinanze di Perugia ignorate i cartelli verso il centro e seguite
+                        quelli per i bus turistici lungo una strada ad anello che vi porterà a Madonna Alta, un enorme
+                        parcheggio libero da dove potrete il minimetro e salire al centro della città.
+                    </p>
+                    <br>
+                    <h5 class="mbr-fonts-style mbr-section-title mbr-light display-2">Percorsi escursionistici</h5>
+                    <hr>
+                    <p class="mbr-text mbr-fonts-style display-7 justify">
+                        Fonte: turismobaschi.it<br>
 
+                        I sentieri qui riportati sono supportati da relativa segnaletica sul territorio, ma in ogni caso
+                        è consigliabile la percorrenza con l'ausilio di Guide esperte del territorio.
+
+                    <h4>BASCHI - CIVITELLA DEL LAGO</h4>
+
+                    Km : 11,800 - Ore 4,30'<br>
+
+                    <p class="justify">Uscendo da Baschi nei pressi del cimitero si prende a sinistra e dopo circa 900 m
+                        si attraversa un fosso. Si sale per circa 600 m quindi si scende presso le rive del Lago di
+                        Corbara sino al Fosso delle Corone. Si continua risalendo leggermente verso l'entroterrra e
+                        tenendo la strada per circa 3 km si arriva ad un trivio a Case Vecchie. Da qui si raggiunge la
+                        strada asfaltata che porta fin sotto Civitella del Lago. Numerose le possibilità di alloggio e
+                        attendamento in zona.</p>
+
+                    <h4>SENTIERO DEL VENTO</h4>
+
+                    Km : 10,400 - Ore 4,00<br>
+
+                    <p class="justify">L'itinerario inizia a Civitella del Lago, castello edificato su un colle sulla
+                        riva sinistra del Tevere e caposaldo difensivo di Todi verso occidente. Dietro il campo sportivo
+                        una strada agricola porta verso est in lieve salita. Dopo circa 2,5 km si incontra un fosso,
+                        che, seguito in discesa, rappresenta il principale accesso ad un grosso inghiottitoio carsico
+                        profondo 72 m : la voragine del "Vorgozzo". Proseguendo lungo la stada agricola, a sinistra si
+                        imbocca una mulattiera che scende alla valle del Fosso dell'Elce Barile dove incontriamo
+                        un'altra mulattiera : all'incrocio si prende a sinistra e poco dopo si guada la confluenza dl
+                        fosso con un altro torrente. Oltrepassato questo punto si raggiunge un quadrivio, e
+                        successivamente a sinistra per una strada agricola raggiungiamo le Buche del Vento. Si tratta di
+                        spaccature nella roccia che a seconda dell'ora della giornata, emettono un forte getto d'aria
+                        fredda oppure ne risucchiano dall'esterno. Il fenomeno è dovuto alla presenza in profondità di
+                        un grande complesso ipogeo : la differenza di temperatura tra interno ed esterno causa una
+                        differenza di pressione e quindi un flusso d'aria. Finora non è però stato trovato nessun
+                        ingresso che porti al complesso sotterraneo. Continuando sulla sterrata, in corrispondenza di un
+                        incrocio si prende a sinistra, verso Morruzze, a destra in direzione di Valle Spinosa dove,
+                        un'altra carrareccia, presa sulla sinistra, ci riporta a Civitella del Lago.</p>
+
+                    <h4>CIVITELLA DEL LAGO - ASPROLI</h4>
+
+                    Km : 12,000 - Ore 5,00<br>
+
+                    <p class="justify">Dietro il campo sportivo una strada agricola in lieve salita porta verso est per
+                        3 km. Si attraversa un piccolo fosso poco dopo il quale a sinistra, si imbocca una mulattiera
+                        che scende curvosa fino alla valle del Fosso dell'Elce Barile. Qui troviamo un'altra mulattiera.
+                        Si prende a sinistra, si guada la confluenza del fosso con un'altro torrente. Si oltrepassa un
+                        successivo incrocio e se ne raggiunge un'altro a quota 517 m. Prendendo a destra si raggiunge
+                        Morruzze. Al quadrivio di Morruzze si procede verso nord fino ad Acqualoreto. Numerose strutture
+                        ricettive tra qui ed Asproli. </p>
+
+                    <h4>ANELLO BASCHI - DIGA DI CORBARA</h4>
+
+                    Km : 10,600 - Ore 3,30'<br>
+
+                    <p class="justify">Si parte dal centro di Baschi, borgo di impianto medievale e si prosegue lungo la
+                        strada statatle n. 205 percorrendola per circa 800 m e ci si immette in un'inghiaiata che
+                        sottopassa l'autostrada A1. L'itinerario costeggia l'autostrada fino a giungere nei pressi di
+                        Podere la Rota : da qui è possibile visitare il sito archeologico di Porto Pagliano (porto
+                        romano di età tardo repubblicana, 1° Sec. a. C.) ed eventualmente anche andarsi ad immettere nel
+                        Grande anello dell'orvietano. Continuando invece l'anello, si costeggia il Tevere fino al
+                        convento di sant'Angelo di Pantanelli dal quale, proseguendo diritti, si potrebbbe giungere
+                        all'abitato di Corbara. Svoltando invece a destra ci si immette in un'asfaltata in direzione
+                        della diga di Corbara. si costeggia il lago per circa 1 km e sulla destra si prende la
+                        carrareccia che riconduce al punto di partenza. </p>
+
+                    <h4>SCOGLIO DEL SALVEREGINA</h4>
+
+                    Km : 9,800 - Ore 4,00<br>
+
+                    <p class="justify">L'itinerario parte dall'Eremo della Pasquarella, davanti al quale c'è un ampio
+                        piazzale per il parcheggio. L'importante edificato religioso ha come oggetto del culto
+                        un'immagine raffigurante i Re Magi. per gli appassionati di arrampicata sportiva, lungo le
+                        vicine Gole del Forello sono dislocate numerose vie attrezzate : la particolare tipologia della
+                        roccia vi ha creato un terreno di gioco capace di soddisfare anche gli arrampicatori più
+                        esperti. Dal piazzale sottostante l'Eremo si attraversa il torrente e si imbocca un sentiero
+                        sulla sinistra che risale la sponda del fosso in direzione di Acqualoreto. La rupe che sovrasta
+                        questo tratto del percorso porta il curioso nome di "Scoglio del salveregina" in quanto, secondo
+                        un'antica leggenda, la Madonna, arrivata in occidente dopo la morte del figlio, avrebbe compiuto
+                        a cavallo un lungo balzo dalla sommità dello scoglio sino all'altro versante della gola. Gli
+                        abitanti della zona giurano che su di una pietra si possono vedere ancora i segni lasciati dagli
+                        zoccoli del cavallo durante il brusco atterraggio. Si giunge nei pressi del Poggio della Sanità,
+                        da dove seguendo una silvopastorale si passa nelle vicinanze di Torre Giannini, di proprietà
+                        privata. Si segue la strada imbrecciata in direzione di Morruzze, senza raggiungere il paese.
+                        oltrepassati due casolari si prosegue andando a destra in lieve discesa. Sempre sulla destra
+                        inizia il sentiero delle Buche del vento. Questa parte delpercorso ricalca l'antica via che
+                        metteva in collegamento Morruze con Civitella, estremi possedimenti del comune di Todi : in
+                        alcuni punti è ancora possibile riconoscere il lastricato originale. L'itinerario segue
+                        l'andamento delle pendici del monte Cerrentino, diventando poi una strada. Oltrepassati tre
+                        grandi tornanti che superano altrettanti fossi, si prende un non molto sentiero sulla destra. Ad
+                        una successiva biforcazione si segue a destra, in ripida discesa. Nelle vicinanze, lungo il
+                        fosso Dell'Acquaviva è presente una piccola forra adatta alla pratica del torrentismo, che offre
+                        alcuni tratti molto aperti, dai quali è possibile godere di suggestivi colpi d'occhio sull'eremo
+                        della Pasquarella e sulle alte cascate incassate nelle pareti rocciose. Procedendo verso il
+                        fosso della Pasquarella, in breve tempo sempre sul sentiero si raggiunge l'Eremo.
+                    </p>
+                    <h5 class="mbr-fonts-style mbr-section-title mbr-light display-2">Cammino dei Borghi silenti</h5>
+                    <hr>
+                    <p class="justify">
+                        Il Cammino dei Borghi Silenti è un percorso ad ANELLO che si snoda sulle pendici settentrionali
+                        dei Monti Amerini, in Umbria.
+                        E’ suddiviso in cinque tappe della durata di altrettanti giorni e attraversa luoghi
+                        incontaminati e borghi medievali ancora intatti: la caratteristica che lo contraddistingue è il
+                        fascino del silenzio, che dai boschi di lecci e castagni, fino alle mura antiche dei piccoli
+                        paesi, sembra abbracciare e comprendere ogni cosa.
+                        <br>
+                        Il camminatore che saprà ascoltare il silenzio che lo circonda, sarà in grado di effettuare un
+                        viaggio fuori dal tempo e dallo spazio, come in una sorta di macchina del tempo: si percorre con
+                        buone gambe ma soprattutto con un gran cuore!
+                        Il percorso è situato nella parte sud occidentale dell’Umbria, in uno dei luoghi più
+                        affascinanti e meno conosciuti della regione, lontano dalle grandi mete turistiche affollate.
+                        Il progetto, ideato dal privato <strong>MARCO FIORONI</strong>, intende promuovere e far conoscere luoghi dal
+                        sicuro fascino attraverso le fatiche degli antichi cammini, dando la possibilità di poter
+                        percorrere il suo anello anche agli amanti della mountain bike.
+                        <br>
+                        <br>
+                        <strong>Sito ufficiale:</strong> <a href="https://www.camminodeiborghisilenti.it/">https://www.camminodeiborghisilenti.it/</a> 
+                        <br>
+                        <div slot="text-align: center">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PaeA5Vj7xOE?si=iwmaY1TXIRS0R8AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="contacts2 cid-rpfcBxpkNz" id="contacts2-5">
-
-        <div class="container">
-            <h2 class="align-center mbr-fonts-style mbr-light display-2">Keep in touch!</h2>
-            <h3 class="mbr-section-subtitle align-center mbr-fonts-style mbr-light display-5">Contattaci per
-                segnalazioni, suggerimenti o altro</h3>
-
-            <div class="mbr-row mbr-justify-content-center">
-                <div class="mbr-col-lg-8 mbr-col-md-12" data-form-type="formoid">
-                    <form class="mbr-form mbr-justify-content-center" method="post" action="email.php">
-                        <div id="submit-success" style="display:none;color:green; text-align:center;margin-bottom:1%;">
-                            Il messaggio è stato inviato correttamente.
-                        </div>
-                        <div id="submit-error" style="display:none;color:red;text-align:center;margin-bottom:1%;">
-                            Si è verificato un errore, si prova di riprovare.
-                        </div>
-                        <div class="fieldset">
-                            <div data-for="form[data][0][1]" class="split-row">
-                                <input type="text" name="nome" data-form-field="Name" placeholder="Nome" required=""
-                                    id="nome">
-                            </div>
-                            <div data-for="form[data][1][1]" class="split-row">
-                                <input type="text" name="cognome" data-form-field="Last Name" placeholder="Cognome"
-                                    required="" id="cognome">
-                            </div>
-                            <div data-for="form[data][2][1]" class="split-row">
-                                <input type="email" name="email_user" data-form-field="Email" placeholder="Email"
-                                    required="" id="email_user">
-                            </div>
-                            <div class="area" data-for="form[data][3][1]">
-                                <textarea name="messaggio_user" rows="7" data-form-field="Message"
-                                    placeholder="Messaggio" id="messaggio_user"></textarea>
-                            </div>
-                        </div>
-                        <div class="captcha align-center">
-                            <div class="spinner">
-                                <label>
-                                    <input type="checkbox" onclick="$(this).attr('disabled','disabled');" required="">
-                                    <span class="checkmark"><span>&nbsp;</span></span>
-                                </label>
-                            </div>
-                            <div class="text">
-                                I'm not a robot
-                            </div>
-                            <div class="logo">
-                                <img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/" />
-                                <p>reCAPTCHA</p>
-                                <small><a href="informativa.html">Privacy - Terms</a></small>
-                            </div>
-                        </div>
-                        <div class="mbr-section-btn align-center">
-                            <span class="gdpr-block ">Continuando accetti i nostri termini di
-                                    servizio e la nostra Privacy
-                                    Policy.</span>
-                            <button class="btn btn-form btn-primary display-4" id="invioMail">INVIA</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="gallery1 cid-s6ZnNJ4Pps" id="gallery2-r">
-        <div class="container">
-            <div class="title align-center">
-                <h3 class="mbr-section-title mbr-light mbr-fonts-style display-1">Galleria</h3>
-            </div>
-            <div class="mbr-row mbr-justify-content-center">
-                <div class="image-wrap mbr-col-sm-12 mbr-col-lg-4 lg-px mbr-col-md-6 pb">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader"
-                            src="assets/images/civitella_del_lago_piazza_vittorio_emanuele.jpg" layout="responsive"
-                            height="191" width="254.66666666666666" alt="Civitella del lago" on="tap:lightbox1"
-                            role="button" tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px pb">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader"
-                            src="assets/images/whatsapp-image-2020-07-31-at-21.20.01-3-676x568.jpg" layout="responsive"
-                            height="214" width="254.6901408450704" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px pb">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader"
-                            src="assets/images/civitella_del_lago_corbara.jpg" layout="responsive"
-                            height="191" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/civitella_del_lago_vicolo.jpg" layout="responsive"
-                            height="400" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/test2.jpg" layout="responsive"
-                            height="400" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/civitella_del_lago_via_centrale.jpg" layout="responsive"
-                            height="400" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader"
-                            src="assets/images/civitella_del_lago_sunset.jpg" layout="responsive"
-                            height="191" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/test3.jpg" layout="responsive"
-                            height="191" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/test.jpg" layout="responsive"
-                            height="191" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/civitella_del_lago_tramonto.jpg" layout="responsive"
-                            height="400" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/civitella_del_lago_via_tortuosa.jpg" layout="responsive"
-                            height="400" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 lg-px last-child">
-                    <div class="image-box cursor">
-                        <amp-img class="mobirise-loader" src="assets/images/civitella/orvieto.jpg" layout="responsive"
-                            height="400" width="254.66666666666666" alt="Mobirise" on="tap:lightbox1" role="button"
-                            tabindex="0">
-                            <div placeholder="" class="placeholder">
-                                <div class="mobirise-spinner">
-                                    <em></em>
-                                    <em></em>
-                                    <em></em>
-                                </div>
-                            </div>
-
-                        </amp-img>
-                        <div class="icon-wrap" on="tap:lightbox1" role="button" tabindex="0">
-                            <span class="amp-iconfont mbri-search"></span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <amp-image-lightbox id="lightbox1" layout="nodisplay">
-            <a class="control" data-close-button-aria-label="Close">
-                <span class="close"></span>
-            </a>
-        </amp-image-lightbox>
-    </section>
-
-    <section class="footer1 cid-rpfcEPB5FO" id="footer1-6">
-
+    <section class="footer1 cid-rpfcEPB5FO" id="footer1-c">
         <div class="container">
             <div class="mbr-col-sm-12 align-center mbr-white">
                 <p class="mbr-text mbr-fonts-style display-7">
@@ -3185,12 +2649,6 @@
             </div>
         </div>
     </section>
-
-    <input name="cookieData" type="hidden"
-        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.html'>cookie policy</a>.">
-    <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)"> <a class="scroll-to-top-arrow"></a>
-    </button>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
@@ -3203,14 +2661,26 @@
                 // Store
                 localStorage.setItem("language", "IT");
             }
+            $("#trek1").php("Trekking e passeggiate possono sembrare poco invitanti durante la calda estate, ma in realtà sono molto piacevoli durante le ore più fresche del mattino e la sera. Vi sono numerosi sentieri e strade sterrate che possono essere percorse per tragitti tra i 45 minuti e le 3 ore. I sentieri sono indicati da mappe e segnaposti ed una mappa cartacea ben dettagliata è disponibile presso l'ufficio turistico ed i bar. Se avete una mountain bike con voi, non perdete l'occasione per un giro avventuruoso tra i boschi ed i campi attorno al lago. Nel periodo estivo si organizzano escursioni.<br>Per maggiori info: tel. 3311098798 &nbsp;- info@civitellarte.it<br><br>La camminata più interessante è quella è quella che conduce alla Pasquarella: cercate il cartello in legno con l'indicazione prima di arrivare a Scoppieto. Seguendo il sentiero tra gli oliveti giungerete ad una interesezione a T poco prima di una casa dove dovrete voltare a sinistra. Dopo circa 150 metri incontrerete gli scavi Romani di Scoppieto. La fornace di Scoppieto, individuata nel 1995, unica al mondo per l'importanza storica, è una fabbrica di ceramica finissima del I sec. d.C. La struttura lavorò per più di 100 anni producendo servizi di piatti, tazzine, ciotole e lucerne realizzati con il sigillo dei fratelli Lucius Zosimus e Publius avilius Zosimus, che lavorarono dal 14 al 75 d.C. commerciando poi grazie al Tevere sui mercati più importanti del Mediterraneo.<br>I materiali rinveunti sono esposti nell'Antiquarium comunale di <strong>Baschi</strong>. Continuando lungo il sentiero si raggiunge un belvedere affacciato sulla gola del Tevere. Tornando indietro, proseguite fino agli scavi, ma invece di girare sulla destra verso la strada, seguite il sentiero tra gli Ulivi. Nei pressi di una casa recentemente estaurata, potrete godere di un'incantevole vista di Todi e in lontananza del <strong>Monte Subasio</strong> nei pressi di Assisi. Seguite il sentiero che vi riporterà verso Civitella sbucando alla Cappelletta di San Sebastiano nei pressi del cimitero.<br><br>Il borgo è dotato di una moderna piscina immersa nel verde ubicata nei pressi del campo sportivo, appena fuori dal paesino, oltre il cimitero e sulla destra della cappella di San Sebastiano. E' aperta tutti i giorni da fine giugno ad inizio settembre(orario 9-19).<br>L'impianto è dotato di camerini, docce, bar e solarium all'aperto. Potrete acquistare le cuffiette al bar nel caso in cui non le abbiate con voi e noleggiare lettini e sdraio. Se arrivate dopo le 14 l'entrata ha un prezzo ridotto. Il campo da tennis ed il campo da calcio si trovano nella stessa area. Il campo da tennis può essere prenotato al bar della piscina.");
+            $("#trek2").php("A distanza di 17 km da civitella, su un altopiano di tufo sorge l'antica città di <strong>Orvieto</strong>. Ai suoi piedi troverete Orvieto Scalo, un moderno quartiere tra la ferrovia e l'autostrada, con vari negozi, tra i quali il grande supermercato Coop ed un centro commerciale.<br>Per raggiungere la città vecchia potrete parcheggiare dietro la stazione e seguire i cartelli per la funicolare. Dalla fermata superiore della funicolare al centro dovrete camminare per un po' e prendere un piccolo bus. In alternativa, guidando attraverso la rotonda di Orvieto Scalo, potrete sostare al parcheggio Foro Boario e raggiungere la città vecchia con scale mobili ed ascensori.<br>Il centro storico di Orvieto ha due grandi piazze. Piazza del Duomo e Piazza del Popolo, dove il mercato viene tenuto Giovedì e Sabato mattina. La facciata del Duomo è un capolavoro unico, al pari degli affreschi del Signorelli nella Cappella di San Brizio al suo interno. Il mercato offre numerosi prodotti freschi in particolare il sabato. Tra i negozi affacciati sulla piazza troverete un pescivendolo, negozi di alimentari e prodotti tipici come il Carraro in Corso Cavour con il suo cinghiale impagliato in vetrina.");
+            $("#trek3").php("Ci sono due vie per raggiungere Todi da Civitella. La prima è quella lungo il lago attraverso la gola del Tevere. La seconda è quella che segue la strada del campo sportivo, dalla quale avrete una visuale più ampia ed una vista panoramica di Todi.<br>Non è generalmente possibile guidare nella città vecchia e dovrete lasciare l'auto o alla Porta Orvietana o al parcheggio nei pressi della Chiesa si Santa Maria della Consolazione. Todi ha una tipica piazza medievale con una fantastica vista in tutte le direzioni. Un abitante locale disse tempo fa di preferire Todi, tipica cittadina in stile umbro, ad Orvieto, caratterizzata invece da tratti etruschi. Anche se le due culture finirono circa 2000 anni fa, la loro impronta è ancora ben visibile nelle menti dei suoi abitanti.");
+            $("#trek4").php(" Nel caso vogliate andare a <strong>Roma</strong> potrete prendere un treno da Orvieto Scalo, che rappresenta un'alternativa più facile, veloce ed economica rispetto alla macchina. In genere il treno impiega circa un'ora per raggiungere la stazione di Termini nel cuore di Roma.<br>Anche <strong>Firenze</strong> è raggiungibile via treno in circa un'ora e mezza. <strong>Arezzo</strong>, il set del film 'La vita è bella' di Roberto Benigni, è a circa metà strada tra Orvieto e Firenze. <strong>Perugia</strong> invece è raggiungibile con la macchina(circa 60 km). Molto più grande di Todi ed Orvieto, offre numerose attrazioni, musei, opere d'arte e negozi. Nelle vicinanze di Perugia ignorate i cartelli verso il centro e seguite quelli per i bus turistici lungo una strada ad anello che vi porterà a Madonna Alta, un enorme parcheggio libero da dove potrete il minimetro e salire al centro della città.");
         })
         $('#gb').click(function (e) {
             if (typeof (Storage) !== "undefined") {
                 // Store
                 localStorage.setItem("language", "EN");
+                $("#trek1").php('Trekking/Walking and other strenuos exercise may not seem very inviting in high summer but in fact it can be very pleasurable in the cooler hours of the morning and evening. There are many footpaths and rough tracks forwalks from 45 minutes to 3 hours. There are signposted footpaths and a detailed local map indicating the different trails is available from the tourist office and bars. if you have a mountain bike with you won\'t to miss the chance of adventuring round the woods and fields surrounding the village. In the summer season several group excursions are oganised, contact info@civitellarte.it<br><br>One of the most interesting walks is the one to <strong>Pasquarella</strong>. Look out for the wooden sign pointing the way from the road as you approach Scoppieto. The track leads through olive groves to a house at a T-junction. Take the turn to the left and after about 150m you arrive at the <strong>Roman Archeleogical site</strong> of Scoppieto. The site is that of a Roman pottery of unique importance dating from the first century AD. The pottery operated for 100 years producing plates, cups, bowls and lamps bearing the trademark of the brothers Lucius Zosimus and Publius Avilus Zosimus who worked there between 14 and 75 AD sending their work by boat down the river Tiber to some of the most important markets in the Mediterranean.');
+                $("#trek2").php('The old city of Orvieto(17km) stands on a plug of rock. You approach it first through Orvieto Scalo, a modern ribbon development which goes alongside the autostrada and the railway with various shops and a large supermarket, a Coop, at the new commercial center. To reach the old town you can park in the station car park(behind the station, follow signs) and go up in the funicular, but this still means a long walk up the main drag from where it stops, though yiu can aksi get a little bus up to the center. Alternatively, when you arrive at the big roundabout, go all the way round the left, towards Viterbo, under a bridge, and then follow the road upwards with the city rising above you on the right. Eventually, just after a left-hand hairpin-bend, your will see the entrance to a large carpark. Park here and you can take escalators or the lift. There are two main piazzas in Orvieto. One is around the Duomo and the other which is the one where markets are held, Piazza del Popolo, is not far away.');
+                $("#trek3").php('There are two routes(26km) from Civitella and they are both good ones. One is along the lake through the Tiber gorge. The other one, and it\' probably better to go this way because of the views, is to take the road up past the Campo Sportivo and follow the signs. This way is a bit longer but you di get faboulous views of Todi as you approach it. You are not supposed to drive your car into Todi so yiu can either park at the bottom at Porta Orvietana and go up in a glass lift, or you can part next to the spectacular church Santa Maria della Consolazione and either walk up through the park or catch an electric shuttle bus from outside the news-stand. Todi has a perfect medieval-reinassance piazza and fantastic views across the countryside in all directions and lots of Umbrian, Roman and renaissance layers. A local once told us in all seriousness that he preferred Todi to Orvieto because it is an Umbrian town whereas Orvieto is an Etruscan one.');
+                $("#trek4").php('If you want to go to Rome you can get the train from Orvieto which is much easier than driving to and parking in the city. It takes around an hour depending on the type of train, doesn\'t cost much and takes you right to Termini station. Firenze is a bit farther, but in the opposite direction, about and hour and a half on fast train. Arezzo(the setting for la vita è bella and with a major Piero della Francesca fresco and other paintings) is about half way there. perugia isn\'t far(60km) and it\'s better to go by car. It\'s much much bigger than Todi and Orvieto, has some great buildings, paintings and shops. Parking here has its own attraction. As you approach Perugia, ignore signs to the center and follow the route marked for tourist buses along the ring road and through various tunnels. This will take you to Madonna Alta, a huge free car park from where you can take the Mini Metro monorail up the hill into the center of the city.');
             }
         })
     </script>
+    <input name="cookieData" type="hidden"
+        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.php'>cookie policy</a>.">
+    <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)"> <a class="scroll-to-top-arrow"></a>
+    </button>
 </body>
 
 </html>

@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo1.png" type="image/x-icon">
     <meta name="description"
         content="Sito non ufficiale di Civitella Del Lago, piccolo borgo umbro nei pressi di Orvieto. Informazioni a 360 gradi su storia, servizi, attività sportive, trekking e cammini">
     <meta name="keywords"
         content="borgo, Umbria, Civitella del Lago, Montecchio, Civitella de' pazzi, Scoppieto, Orvieto, Baschi, Todi, Cammino dei Borghi silenti">
     <meta name="author" content="Pierpaolo Di Dato">
-    <meta name="description" content="">
-    <link href="vendor/flag/assets/docs.css" rel="stylesheet">
-    <link href="vendor/flag/css/flag-icon.css" rel="stylesheet">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
-    <link href="assets/style/style.css" rel="stylesheet">
-    <title>Civitella del Lago</title>
-    <link rel="canonical" href="servizi.html">
+    <title>tour</title>
+    <link rel="canonical" href="tour.php">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -23,6 +21,7 @@
             -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             animation: -amp-start 8s steps(1, end) 0s 1 normal both
         }
+
         @-webkit-keyframes -amp-start {
             from {
                 visibility: hidden
@@ -86,17 +85,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic"
         rel="stylesheet">
-
     <style amp-custom>
-        .targetBorder.selected {
-            border: 3px solid #000;
-        }
-
-        .flag-wrapper {
-            width: 10% !important;
-            margin-right: 3%;
-        }
-
         div,
         span,
         h1,
@@ -2235,36 +2224,65 @@
             }
         }
 
-        .cid-rpfkY1KvKw {
+        .cid-rpJ9jNq8yr {
             padding-top: 60px;
             padding-bottom: 60px;
-            background-image: url("assets/images/afru-61760-900x600.jpg");
+            background-image: url("assets/images/f-714971-1024x768.jpg");
         }
 
-        .cid-rpfkY1KvKw .mbr-title {
+        .cid-rpJ9jNq8yr .mbr-title {
             padding-bottom: 1rem;
         }
 
-        .cid-rpfkY1KvKw .mbr-section-btn {
+        .cid-rpJ9jNq8yr .mbr-section-btn {
             padding-top: 1.5rem;
         }
 
-        .cid-rpfkY1KvKw H2 {
-            color: #ffffff;
+        .cid-rpJ9kCktHG {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #ffffff;
         }
 
-        .cid-rpfl8eOgZW {
+        .cid-rpJ9kCktHG .mbr-text {
+            padding: 2rem 0;
+        }
+
+        .cid-rpJ9mikJi6 {
             padding-top: 60px;
             padding-bottom: 60px;
             background-color: #ffffff;
         }
 
-        .cid-rpfl8eOgZW .mbr-text {
+        .cid-rpJ9mikJi6 .counter-container ul {
             margin-bottom: 0;
         }
 
-        .cid-rpfl8eOgZW .mbr-section-title {
-            margin: 0;
+        .cid-rpJ9mikJi6 .counter-container ul li {
+            color: inherit;
+            padding-bottom: 1rem;
+            list-style: none;
+        }
+
+        .cid-rpJ9mikJi6 .counter-container ul li:before {
+            box-sizing: inherit;
+            position: absolute;
+            left: 0px;
+            padding-top: 3px;
+            content: '';
+            display: inline-block;
+            text-align: center;
+            margin: 10px 15px;
+            line-height: 20px;
+            transition: all .2s;
+            color: #ffffff;
+            background: #4ea2e3;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border-radius: 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
         }
 
         .cid-rpfcEPB5FO {
@@ -2295,10 +2313,11 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-position-observer"
+        src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
 
 </head>
-
 <body>
     <div id="top-page"></div> <amp-animation id="showScrollToTopAnim" layout="nodisplay">
         <script
@@ -2315,40 +2334,34 @@
                 <span></span>
                 <span></span>
             </button>
-
-            <div class="brand">
-                <span class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" width="65%;" /></a>
-                </span>
-
-            </div>
             <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
+                    <a class="nav-link link text-primary display-7" href="storia.php">Storia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
+                    <a class="nav-link link text-primary display-7" href="servizi.php">Servizi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="sport.html">
+                    <a class="nav-link link text-primary display-7" href="sport.php">
                         Sport e trekking</a>
                 </li>
-                <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
-                        target="blank">
+                <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it">
                         Ovo Pinto</a></li>
             </ul>
 
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                    href="index.html#contacts2-5">
+                    href="index.php#contacts2-5">
                     Contattaci</a></div>
         </div>
     </amp-sidebar>
-    <section class="menu horizontal-menu cid-rpfciQyPtf" id="menu2-b">
+
+    <section class="menu horizontal-menu cid-rpfciQyPtf" id="menu2-0">
+
 
         <nav class="navbar navbar-dropdown navbar-expand-lg">
             <div class="brand">
                 <span class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" width="65%;" /></a>
+                    <a href="index.php"><img src="assets/images/logo.png" width="65%;" /></a>
                 </span>
 
             </div>
@@ -2356,13 +2369,13 @@
 
                 <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
+                        <a class="nav-link link text-primary display-7" href="storia.php">Storia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
+                        <a class="nav-link link text-primary display-7" href="servizi.php">Servizi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="sport.html">
+                        <a class="nav-link link text-primary display-7" href="sport.php">
                             Sport e trekking</a>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
@@ -2371,7 +2384,7 @@
                 </ul>
 
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                        href="index.html#contacts2-5">
+                        href="index.php#contacts2-5">
                         Contattaci</a></div>
             </div>
 
@@ -2382,159 +2395,33 @@
                 <span></span>
             </button>
         </nav>
-
-        <!-- AMP plug -->
-
-
     </section>
 
-    <section class="engine"><a href="https://mobirise.info/a">online web builder</a></section>
-    <section class="mbr-section content18 cid-rpfkY1KvKw" id="content18-g">
+    <section class="mbr-section content19 cid-rpJ9jNq8yr" id="content19-n">
 
         <div class="mbr-container">
-            <h2 class="mbr-title align-center mbr-fonts-style mbr-bold mbr-white display-1">Attività e servizi</h2>
+            <h2 class="mbr-title align-center mbr-fonts-style mbr-bold mbr-white display-1">
+                Tour virtuale</h2>
+            <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style mbr-white display-5">
+                <em>Visita il bellissimo borgo interagendo con la mappa.</em>
+            </h3>
+            <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="#">START TOUR</a></div>
         </div>
     </section>
-
-    <section class="content2 mbr-section article cid-rpfl8eOgZW" id="content2-h">
-
+    <section class="content4 mbr-section article cid-rpJ9kCktHG" id="content4-o">
         <div class="container">
-            <div class="mbr-row mbr-justify-content-center">
-
-                <div class="mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-8">
-                    <div class="container text-center" style="margin-top:3%;">
-                        <span id="flag1" class="col-md-1 col-sm-2 col-xs-3 center" style="width: 10%;"><span
-                                class="click flag-wrapper"><span
-                                    class="img-thumbnail flag flag-icon-background flag-icon-it targetBorder selected cursor"
-                                    title="it" id="it"></span></span></span>
-                        <span id="flag2" class="col-md-1 col-sm-2 col-xs-3 center" style="width: 10%;"><span
-                                class="click flag-wrapper"><span
-                                    class="img-thumbnail flag flag-icon-background flag-icon-gb targetBorder cursor" title="gb"
-                                    id="gb"></span></span></span>
-
-                    </div>
-                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2">
-                        Attività e servizi</h3>
-                    <p class="mbr-text mbr-fonts-style display-7 justify" id="servizi_text">
-                        Durante l'estate, l'Ufficio turistico apre le sue porte in una saletta sopra la Portella, l'arco
-                        medievale che delimita l'entrata della piazza Belvedere. E' gestito da giovani volontari locali
-                        che saranno lieti di fornire tutte le informazioni necessarie per il vostro soggiorno
-                        civitellese.<br><br>La mostra concorso <strong>Ovo Pinto </strong>è un evento imperdibile da
-                        Pasqua al 1 maggio. La manifestazione si basa sull'antica arte della pittura sui gusci di uova
-                        da parte di artisti e non, nazionali ed internazionali, con risultati talvolta sorprendenti ed
-                        inaspettati. Un'esibizione permanente delle migliori opere è allestita nel Museo
-                        dell'<strong>Ovo Pinto</strong> affacciato su Piazza Mazzini, di fronte alla Chiesa. Il museo è
-                        aperto tutti i giorni da Pasqua al 30 settembre, durante il fine settimana per i mesi restanti,
-                        chiuso il lunedì.<br><br>Per maggiori info: tel. 3408995074 &nbsp;-
-                        info@civitellarte.it<br><br>Il borgo è dotato di una moderna piscina immersa nel verde ubicata
-                        nei pressi del campo sportivo, appena fuori dal paesino, oltre il cimitero e sulla destra della
-                        cappella di San Sebastiano. E' aperta tutti i giorni da fine giugno ad inizio settembre(orario
-                        9-19).<br>L'impianto è dotato di camerini, docce, bar e solarium all'aperto. Potrete acquistare
-                        le cuffiette al bar nel caso in cui non le abbiate con voi e noleggiare lettini e sdraio. Se
-                        arrivate dopo le 14 l'entrata ha un prezzo ridotto. Il campo da tennis ed il campo da calcio si
-                        trovano nella stessa area. Il campo da tennis può essere prenotato al bar della
-                        piscina.<br><br>Inoltre, a Civitella, potrete trovare tutto il necessario per il vostro
-                        soggiorno. &nbsp;Se arrivate dal camping Falcone o da un alloggio nelle vicinanze, potrete
-                        parcheggiare gratuitamente nelle vicinanze del Monumento ai caduti o lungo via
-                        Italia.&nbsp;<br>Il negozio di alimentari <strong>Trippini Market</strong> gestito dalla
-                        famiglia Trippini, all'angolo della piazza della chiesa, non ha una vetrina, solo una porta
-                        adornata da una tenda. Franco e Franca, con il figlio Stefano e la moglie Laura, vi offriranno
-                        ottimi prodotti locali, salumi fatti in casa, una vasta selezione di vini locali, formaggi,
-                        carne, pane casereccio e altro. Il negozio è aperto dalle 8 alle 13 e dalle 17 alle 20. Chiuso
-                        il mercoledì, la domenica dopo le 13.<br>Mercoledì mattina, dopo le 9, troverete anche Max, il
-                        <strong>pescivendolo</strong> ambulante con la sua selezione di pesce dal Mediterraneo, nella
-                        piazza di fronte alla chiesa.<br>La <strong>farmacia</strong> di Silvio e Angela è situata in
-                        cima a Via Umberto I. Tel. 07449503305.<br>L'<strong>ufficio postale</strong> si trova tra il
-                        Monumento ai caduti ed il borgo vecchio ed è aperto solo al mattino il lunedì, il mercoledì, il
-                        venerdì e sabato. Tel.0744950505.<br>Il <strong>benzinaio</strong> è situato all'entrata del
-                        paese, sulla destra, gestito da Angelo e Rossella. Il prezzo è concorrenziale con quello delle
-                        stazioni più grandi sulla strada verso Orvieto.<br>Un ottimo souvenir da acquistare è
-                        sicuramente una bottiglia di olio extravergine d'oliva locale del <strong>Frantoio
-                            Morelli</strong>, in via Italia. Tel. 0744950356 - 3331725105 - morelli.i@tiscali.it<br>In
-                        piazza Belvedere vi è anche un angolino dedicato alla cultura: una piccola vetrina ricca di
-                        vecchi libri e stampe antiche di Sergio Trippini. Si riceve su appuntamento. Tel. 3311098798 -
-                        www.trippini.it<br>
-                    </p>
-                    <hr>
-                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2">
-                        Tenuta di Salviano</h3>
-                    <p class="mbr-text mbr-fonts-style display-7 justify" id="servizi_text">
-                        A pochi chilometri di distanza da Civitella del Lago vi è la <strong>Tenuta di
-                            Salviano</strong>, struttura appartenente alla famiglia Corsini dal XVII secolo. I suoi 65
-                        ettari di vigneti con altezze che variano dai 150m ai 500m crescono sulle colline intorno al
-                        Lago di Corbara. La collocazione geografica ei vigneti ed esposizione a sud e sud ovest danno la
-                        loro migliore espressione a vitigni selezionati quali Sangiovese, Merlot, Cabernet, Chardonnay,
-                        Sauvignon e Grechetto.
-                    </p>
-                    <hr>
-                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2">
-                        Osteria da Cencio</h3>
-                    <p class="mbr-text mbr-fonts-style display-7 justify" id="servizi_text">
-                        Sul belvedere più bello dell'Umbria ed in pieno centro storico civitellese, questa osteria di recente
-                        apertura offre piatti della tradizione locale a cifre contenute.
-                        <br>
-                        <br>
-                        <strong>Pagina Instagram:</strong> <a href="https://www.instagram.com/osteria_da_zio_cencio/" target="_blank">https://www.instagram.com/osteria_da_zio_cencio/</a>
-                    </p>
-                    <hr>
-                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2">
-                        Casa Vissani</h3>
-                    <p class="mbr-text mbr-fonts-style display-7 justify" id="servizi_text">
-                        Ebbene si, il famosissimo chef Gianfranco Vissani ha origini civitellesi ed il suo ristorante,
-                        a pochi chilometri dal centro storico, vanta numerossimi riconoscimenti tra cui la stella Michelin.
-                        <br><br>
-                        <span>
-                            <i>
-                                "All'arrivo, accolti dal figlio Luca, se il tempo lo permette concedetevi una sosta sul prato di fronte al lago, prima di entrare e tuffarvi nell'eleganza delle sale. 
-                                Si inizia da quella rock, per il benvenuto, l'aperitivo e la scelta dei piatti, a quella di servizio, raffinatissima, mix di elementi diversi combinati tra loro con maestria 
-                                e cucine a vista incorniciate come fossero quadri. I menu, che devono essere scelti in anticipo, sono suddivisi in colori e particolarità: l'oro è la tradizione, il rosso la terra, il blu l’acqua, il verde il vegetariano, 
-                                il nero… sorpresa! A tutta questa originalità e modernità, il ristorante risponde con alcuni elementi tradizionali, come il pane e i deliziosi grissini (ricetta di famiglia!). Camere lussuosamente arredate."
-                            </i>
-                        </span>
-                    </p>
-                </div>
+            <div class="mbr-text align-center mbr-fonts-style mbr-light display-2">
+                Pagina in allestimento. Ci scusiamo per il disagio.
+                <br>
+                <br>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Under_Construction.jpeg" width="20%">
             </div>
         </div>
     </section>
-
-    <section class="footer1 cid-rpfcEPB5FO" id="footer1-c">
-
-        <div class="container">
-            <div class="mbr-col-sm-12 align-center mbr-white">
-                <p class="mbr-text mbr-fonts-style display-7">
-                    © Copyright
-                    <script>document.write(new Date().getFullYear())</script> Civitella del lago - All Rights
-                    Reserved<br>
-                    email: <span class="text-primary"><strong>contatti@civitelladellago.com</strong></span>
-                </p>
-            </div>
-        </div>
+    <section class="content7 mbr-section cid-rpJ9mikJi6" id="content7-p">
     </section>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>
-        $('.targetBorder').on('click', function () {
-            $('.targetBorder').removeClass('selected');
-            $(this).addClass('selected');
-        });
-        $('#it').click(function (e) {
-            if (typeof (Storage) !== "undefined") {
-                // Store
-                localStorage.setItem("language", "IT");
-            }
-            $('#servizi_text').html(" Durante l'estate, l'Ufficio turistico apre le sue porte in una saletta sopra la Portella, l'arco medievale che delimita l'entrata della piazza Belvedere. E' gestito da giovani volontari locali che saranno lieti di fornire tutte le informazioni necessarie per il vostro soggiorno civitellese.<br><br>La mostra concorso <strong>Ovo Pinto </strong>è un evento imperdibile da Pasqua al 1 maggio. La manifestazione si basa sull'antica arte della pittura sui gusci di uova da parte di artisti e non, nazionali ed internazionali, con risultati talvolta sorprendenti ed inaspettati. Un'esibizione permanente delle migliori opere è allestita nel Museo dell'<strong>Ovo Pinto</strong> affacciato su Piazza Mazzini, di fronte alla Chiesa. Il museo è aperto tutti i giorni da Pasqua al 30 settembre, durante il fine settimana per i mesi restanti, chiuso il lunedì.<br><br>Per maggiori info: tel. 3408995074 &nbsp;- info@civitellarte.it<br><br>Il borgo è dotato di una moderna piscina immersa nel verde ubicata nei pressi del campo sportivo, appena fuori dal paesino, oltre il cimitero e sulla destra della cappella di San Sebastiano. E' aperta tutti i giorni da fine giugno ad inizio settembre(orario 9-19).<br>L'impianto è dotato di camerini, docce, bar e solarium all'aperto. Potrete acquistare le cuffiette al bar nel caso in cui non le abbiate con voi e noleggiare lettini e sdraio. Se arrivate dopo le 14 l'entrata ha un prezzo ridotto. Il campo da tennis ed il campo da calcio si trovano nella stessa area. Il campo da tennis può essere prenotato al bar della piscina.<br><br>Inoltre, a Civitella, potrete trovare tutto il necessario per il vostro soggiorno. &nbsp;Se arrivate dal camping Falcone o da un alloggio nelle vicinanze, potrete parcheggiare gratuitamente nelle vicinanze del Monumento ai caduti o lungo via Italia.&nbsp;<br>Il negozio di alimentari <strong>Trippini Market</strong> gestito dalla famiglia Trippini, all'angolo della piazza della chiesa, non ha una vetrina, solo una porta adornata da una tenda. Franco e Franca, con il figlio Stefano e la moglie Laura, vi offriranno ottimi prodotti locali, salumi fatti in casa, una vasta selezione di vini locali, formaggi, carne, pane casereccio e altro. Il negozio è aperto dalle 8 alle 13 e dalle 17 alle 20. Chiuso il mercoledì, la domenica dopo le 13.<br>Mercoledì mattina, dopo le 9, troverete anche Max, il <strong>pescivendolo</strong> ambulante con la sua selezione di pesce dal Mediterraneo, nella piazza di fronte alla chiesa.<br>La <strong>farmacia</strong> di Silvio e Angela è situata in cima a Via Umberto I. Tel. 07449503305.<br>L'<strong>ufficio postale</strong> si trova tra il Monumento ai caduti ed il borgo vecchio ed è aperto solo al mattino il lunedì, il mercoledì, il venerdì e sabato. Tel.0744950505.<br>Il <strong>benzinaio</strong> è situato all'entrata del paese, sulla destra, gestito da Angelo e Rossella. Il prezzo è concorrenziale con quello delle stazioni più grandi sulla strada verso Orvieto.<br>Un ottimo souvenir da acquistare è sicuramente una bottiglia di olio extravergine d'oliva locale del <strong>Frantoio Morelli</strong>, in via Italia. Tel. 0744950356 - 3331725105 - morelli.i@tiscali.it<br>In piazza Belvedere vi è anche un angolino dedicato alla cultura: una piccola vetrina ricca di vecchi libri e stampe antiche di Sergio Trippini. Si riceve su appuntamento. Tel. 3311098798 - www.trippini.it");
-        })
-        $('#gb').click(function (e) {
-            if (typeof (Storage) !== "undefined") {
-                // Store
-                localStorage.setItem("language", "EN");
-            }
-            $('#servizi_text').html('During the summer months the Tourist Office can be found in a characterful room in the Portella, the medieval archway which stands at the entrance to the Belvedere. It is staffed by young, local volunteers more than willing to help you with every kinf of information relating to your visit to Civitella.<br><br>Outside the summer months the main event is <strong>Ovo Pinto</strong> at Easter and until May 1st. This is an unmissable exhibition inspired by the ancient art of painting the shells of eggs. Artists, amateur and professional, local, national and international, enter the competition every year responding to a given theme and the work produced is always skilful and wonderfully unexpected. A permanent exhibition of the best works done over the years is on display in the Museum of Ovo Pinto which overlooks the Piazza Mazzini in front of the church, is open every day, except Monday, from Easter to 30 September and at week-ends during the rest of the year.<br><br> Tel. 3408995074 - www.ovopinto.it<br><br>The village is blessed with a beautiful, modern <strong>swimming pool</strong> situated among the woodland greenery of the sportsground just outside the village, past the cemetery and on the road to the right of the shrine to St Sebastian. It is open every day from the end of June to the beginning of september from 9h-19h. There are changing rooms, showers, a bar, sun-terraces and barbecue fireplaces in the surrounding grounds. You need a hat to swim, which can be purchased from the bar if you don\'t have one, and you can rent deckchairs and sunbeds, also from the bar. From 14h the modest entrance fee is reduced. There is a tennis court and football pitch in the same complex, and the tennis court can be booked at the swimming pool bar, or in tel. 3332723185 - piscinadicivitelladellago@gmail.com<br><br>There are shops, bars, a restaurant, a pharmacy, a petrol station and a post office in Civitella and so it\' perfectly possible to get nearly everything you need in the village with friendly service without the need to drive any distance, although at the moment there is still no Bancomat/ATM. If you are coming from the excellent campsite Il falcone, or from house nearby, parking is mostly by the war memorial on the main street as you enter the village, and along via Italia.<br><br><strong>Trippini Market</strong> doesn\'t have a shop window, just an open door with a curtain in a corner of the piazza to the left of the church. IT\'s run by Franca and Franco Trippini, their son Stefano and his wife Laura. they sell fresh meat, a good selection of local wine and excellent cheese as well as bread. fresh fruit and vegetables and other staples. Opening hours 8 am until 1pm and 5pm until 8pm. Closed on Wednesdays and after 1pm on Sundays. tel. 0744950535 - trippinimarket@libero.it');
-        })
-    </script>
-
-    <input name="cookieData" type="hidden"
-        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.html'>cookie policy</a>.">
+    <!-- FOOTER -->
+    <?php include 'footer.php' ?>
     <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)"> <a class="scroll-to-top-arrow"></a>
     </button>
 </body>

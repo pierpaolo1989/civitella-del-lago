@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html amp>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +13,9 @@
     <link href="vendor/flag/assets/docs.css" rel="stylesheet">
     <link href="vendor/flag/css/flag-icon.css" rel="stylesheet">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
+    <link href="assets/style/style.css" rel="stylesheet">
     <title>Civitella del Lago</title>
-    <link rel="canonical" href="servizi.html">
+    <link rel="canonical" href="servizi.php">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -2322,19 +2322,19 @@
 
             <div class="brand">
                 <span class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" width="65%;" /></a>
+                    <a href="index.php"><img src="assets/images/logo.png" width="65%;" /></a>
                 </span>
 
             </div>
             <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
+                    <a class="nav-link link text-primary display-7" href="storia.php">Storia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
+                    <a class="nav-link link text-primary display-7" href="servizi.php">Servizi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-primary display-7" href="sport.html">
+                    <a class="nav-link link text-primary display-7" href="sport.php">
                         Sport e trekking</a>
                 </li>
                 <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
@@ -2343,7 +2343,7 @@
             </ul>
 
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                    href="index.html#contacts2-5">
+                    href="index.php#contacts2-5">
                     Contattaci</a></div>
         </div>
     </amp-sidebar>
@@ -2355,7 +2355,7 @@
         <nav class="navbar navbar-dropdown navbar-expand-lg">
             <div class="brand">
                 <span class="brand-logo">
-                    <a href="index.html"><img src="assets/images/logo.png" width="65%;" /></a>
+                    <a href="index.php"><img src="assets/images/logo.png" width="65%;" /></a>
                 </span>
 
             </div>
@@ -2363,13 +2363,13 @@
 
                 <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="storia.html">Storia</a>
+                        <a class="nav-link link text-primary display-7" href="storia.php">Storia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="servizi.html">Servizi</a>
+                        <a class="nav-link link text-primary display-7" href="servizi.php">Servizi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-primary display-7" href="sport.html">
+                        <a class="nav-link link text-primary display-7" href="sport.php">
                             Sport e trekking</a>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
@@ -2378,7 +2378,7 @@
                 </ul>
 
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7"
-                        href="index.html#contacts2-5">
+                        href="index.php#contacts2-5">
                         Contattaci</a></div>
             </div>
 
@@ -2503,7 +2503,7 @@
     </script>
 
     <input name="cookieData" type="hidden"
-        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.html'>cookie policy</a>.">
+        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.php'>cookie policy</a>.">
     <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)"> <a class="scroll-to-top-arrow"></a>
     </button>
 </body>
