@@ -20,11 +20,23 @@
         <a class="site-logo" href="index.php" aria-label="Civitella del Lago, torna alla home">
             <img src="assets/images/logo.png" alt="Civitella del Lago">
         </a>
-        <nav class="site-nav" aria-label="Navigazione principale">
+        <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false"
+            aria-label="Apri il menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <button class="nav-backdrop" type="button" aria-label="Chiudi il menu" tabindex="-1"></button>
+        <nav class="site-nav" id="site-navigation" aria-label="Navigazione principale">
+            <button class="nav-close" type="button" aria-label="Chiudi il menu">
+                <span></span>
+                <span></span>
+            </button>
             <a href="storia.php">Storia</a>
             <a href="servizi.php">Servizi</a>
             <a href="sport.php">Sport e trekking</a>
-            <a href="tour.php" aria-current="page">Tour virtuale</a>
+            <a href="http://www.ovopinto.it" target="_blank" rel="noopener noreferrer">Ovo Pinto</a>
             <a class="contact-link" href="index.php#contacts2-5">Contattaci</a>
         </nav>
     </header>
@@ -58,7 +70,7 @@
                 <ol class="stop-list" aria-label="Tappe del tour">
                     <li class="stop-card" id="tappa-piazza" data-stop-id="piazza">
                         <img src="assets/images/civitella_del_lago_piazza_vittorio_emanuele.jpg"
-                            alt="Piazza Vittorio Emanuele e le case in pietra del borgo" loading="lazy">
+                            alt="Piazza Vittorio Emanuele e le case in pietra del borgo">
                         <div class="stop-content">
                             <p class="stop-number">Tappa 01</p>
                             <h3>Piazza Vittorio Emanuele</h3>
@@ -72,7 +84,7 @@
                     </li>
                     <li class="stop-card" id="tappa-centrale" data-stop-id="centrale">
                         <img src="assets/images/civitella/civitella_del_lago_via_centrale.jpg"
-                            alt="Un vicolo di pietra in Via Centrale" loading="lazy">
+                            alt="Un vicolo di pietra in Via Centrale">
                         <div class="stop-content">
                             <p class="stop-number">Tappa 02</p>
                             <h3>Via Centrale</h3>
@@ -86,7 +98,7 @@
                     </li>
                     <li class="stop-card" id="tappa-tortuosa" data-stop-id="tortuosa">
                         <img src="assets/images/civitella/civitella_del_lago_via_tortuosa.jpg"
-                            alt="Scalinata e vicolo in Via Tortuosa" loading="lazy">
+                            alt="Scalinata e vicolo in Via Tortuosa">
                         <div class="stop-content">
                             <p class="stop-number">Tappa 03</p>
                             <h3>Via Tortuosa</h3>
@@ -100,7 +112,7 @@
                     </li>
                     <li class="stop-card" id="tappa-belvedere" data-stop-id="belvedere">
                         <img src="assets/images/civitella/DSCF9548.jpg"
-                            alt="Il lago di Corbara al tramonto, visto dai dintorni di Civitella" loading="lazy">
+                            alt="Il lago di Corbara al tramonto, visto dai dintorni di Civitella">
                         <div class="stop-content">
                             <p class="stop-number">Tappa 04</p>
                             <h3>Piazza Belvedere</h3>

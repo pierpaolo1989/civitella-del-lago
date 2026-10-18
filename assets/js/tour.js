@@ -4,12 +4,56 @@
     var mapElement = document.getElementById("tour-map");
     var statusElement = document.getElementById("map-status");
 
-    if (!mapElement || !statusElement) {
-        return;
+    if (mapElement && statusElement && typeof L === "undefined") {
+        statusElement.textContent = "La mappa non si è caricata. Puoi comunque consultare le tappe nell'elenco.";
     }
 
-    if (typeof L === "undefined") {
-        statusElement.textContent = "La mappa non si è caricata. Puoi comunque consultare le tappe nell'elenco.";
+    var header = document.querySelector(".site-header");
+    var menuToggle = document.querySelector(".nav-toggle");
+    var menuCloseButtons = document.querySelectorAll(".nav-close, .nav-backdrop");
+
+    function setMenuOpen(isOpen) {
+        if (!header || !menuToggle) {
+            return;
+        }
+
+        header.classList.toggle("menu-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Chiudi il menu" : "Apri il menu");
+        document.body.classList.toggle("menu-is-open", isOpen);
+    }
+
+    if (header && menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        menuCloseButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                setMenuOpen(false);
+            });
+        });
+
+        header.querySelectorAll(".site-nav a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                setMenuOpen(false);
+            });
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                setMenuOpen(false);
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 900) {
+                setMenuOpen(false);
+            }
+        });
+    }
+
+    if (!mapElement || !statusElement || typeof L === "undefined") {
         return;
     }
 
