@@ -37,8 +37,8 @@ button:focus-visible {
 }
 
 .site-header {
-    min-height: 78px;
-    padding: 10px clamp(20px, 5vw, 72px);
+    min-height: 153px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,9 +52,9 @@ button:focus-visible {
 }
 
 .site-logo img {
-    display: block;
-    width: 180px;
-    max-width: 34vw;
+    display: inline;
+    width: 130px;
+    max-width: 65vw;
     height: auto;
 }
 
@@ -84,12 +84,22 @@ button:focus-visible {
 }
 
 .site-nav .contact-link {
-    padding: 9px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4rem 0.5rem;
+    padding: 0.6rem 0.8rem;
     color: #fff;
-    border: 2px solid var(--tour-primary);
-    border-radius: 3px;
+    border: 1px solid var(--tour-primary);
+    border-radius: 0;
     background: var(--tour-primary);
-    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    white-space: normal;
+    transition: all 0.3s ease-in-out;
 }
 
 .site-nav .contact-link:hover {
@@ -142,23 +152,26 @@ button:focus-visible {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    min-height: 46px;
-    padding: 11px 18px;
+    margin: 0.4rem 0.5rem;
+    padding: 1rem 2rem;
     color: #fff;
     border: 2px solid var(--tour-primary);
-    border-radius: 3px;
+    border-radius: 0;
     background: var(--tour-primary);
-    font: inherit;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.4;
     text-decoration: none;
-    transition: background-color 160ms ease, transform 160ms ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .primary-button:hover {
     color: #fff;
+    border-color: var(--tour-primary-dark);
     background: var(--tour-primary-dark);
-    transform: translateY(-1px);
 }
 
 .tour-hero .primary-button {
@@ -410,36 +423,38 @@ button:focus-visible {
 
 @media (max-width: 991px) {
     .site-header {
-        min-height: 70px;
+        min-height: 153px;
         align-items: center;
         flex-direction: row;
-        gap: 16px;
-        padding: 10px 22px;
+        gap: 0;
+        padding: 8px 16px;
     }
 
     .site-logo img {
-        width: 150px;
-        max-width: 70vw;
+        width: 130px;
+        max-width: 65vw;
     }
 
     .nav-toggle {
         position: relative;
         display: inline-flex;
-        width: 36px;
-        height: 30px;
-        flex: 0 0 36px;
+        width: 30px;
+        height: 20px;
+        flex: 0 0 30px;
         align-items: center;
         justify-content: center;
         padding: 0;
         border: 0;
         background: transparent;
         cursor: pointer;
-        z-index: 12;
+        z-index: 9;
+        margin-left: auto;
+        margin-right: 20px;
     }
 
     .nav-toggle span {
         position: absolute;
-        right: 3px;
+        right: 0;
         width: 30px;
         height: 2px;
         border-radius: 2px;
@@ -448,30 +463,16 @@ button:focus-visible {
     }
 
     .nav-toggle span:nth-child(1) {
-        top: 5px;
+        top: 0;
     }
 
     .nav-toggle span:nth-child(2),
     .nav-toggle span:nth-child(3) {
-        top: 13px;
+        top: 8px;
     }
 
     .nav-toggle span:nth-child(4) {
-        top: 21px;
-    }
-
-    .site-header.menu-open .nav-toggle span:nth-child(1),
-    .site-header.menu-open .nav-toggle span:nth-child(4) {
-        top: 13px;
-        opacity: 0;
-    }
-
-    .site-header.menu-open .nav-toggle span:nth-child(2) {
-        transform: rotate(45deg);
-    }
-
-    .site-header.menu-open .nav-toggle span:nth-child(3) {
-        transform: rotate(-45deg);
+        top: 16px;
     }
 
     .site-nav {
@@ -506,10 +507,8 @@ button:focus-visible {
     }
 
     .site-nav .contact-link {
-        margin-top: 20px;
-        padding: 11px 16px;
-        border: 2px solid var(--tour-primary);
-        text-align: center;
+        align-self: flex-start;
+        margin: 0.4rem 0.5rem;
     }
 
     .nav-close {
@@ -519,10 +518,12 @@ button:focus-visible {
         height: 34px;
         align-self: flex-end;
         margin: 0 0 18px;
+        flex: 0 0 34px;
         padding: 0;
         border: 0;
         background: transparent;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .nav-close span {
@@ -586,11 +587,6 @@ button:focus-visible {
 }
 
 @media (max-width: 560px) {
-    .site-logo img {
-        width: 150px;
-        max-width: 70vw;
-    }
-
     .tour-hero {
         min-height: 380px;
         padding-top: 54px;
@@ -640,6 +636,13 @@ button:focus-visible {
         align-items: flex-start;
         flex-direction: column;
         padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .primary-button {
+        font-size: calc(0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc(1.4 * (0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20))));
     }
 }
 

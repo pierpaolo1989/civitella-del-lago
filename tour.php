@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="tour.php">
     <title>Tour virtuale di Civitella del Lago</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <link rel="stylesheet" href="assets/style/tour.css">
@@ -47,7 +49,7 @@
                 <p class="eyebrow">Umbria · Lago di Corbara</p>
                 <h1 id="tour-title">Civitella, passo dopo passo</h1>
                 <p class="hero-copy">Perditi tra i vicoli in pietra, affacciati sul lago e scopri il borgo con una passeggiata virtuale.</p>
-                <a class="primary-button" href="#percorso">Inizia il tour <span aria-hidden="true">↓</span></a>
+                <a class="primary-button" href="#percorso">Inizia il tour <span aria-hidden="true"></span></a>
             </div>
         </section>
 
