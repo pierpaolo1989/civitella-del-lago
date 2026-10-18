@@ -33,6 +33,5 @@ EOT;
 else{
     $msg = 'Siamo spiacenti, qualcosa è andato storto. Riprova più tardi';
 }
-header("Location: /index.php", true, 301);  
-exit(); 
+return $msg;
 ?>

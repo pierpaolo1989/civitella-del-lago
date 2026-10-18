@@ -147,7 +147,7 @@
    </h3>
    <div class="mbr-row mbr-justify-content-center">
       <div class="mbr-col-lg-8 mbr-col-md-12" data-form-type="formoid">
-         <form class="mbr-form mbr-justify-content-center" method="post" action="email.php">
+         <form class="mbr-form mbr-justify-content-center">
             <div id="submit-success" style="display:none;color:green; text-align:center;margin-bottom:1%;">
             <?php echo $msg; ?>
             </div>
@@ -482,6 +482,35 @@
                 localStorage.setItem("language", "EN");
             }
         })
+
+        $(document).ready(function() {
+
+            $("#invioMail").click(function() { 
+                debugger;
+                var nome = $('#nome').val();
+                var email = $("#email_user").val();
+                var messaggio = $("#messaggio_user").val();
+                var data = {
+                    "email_user" : email,
+                    "messaggio_user":  messaggio,
+                    "nome" : nome
+                };
+                $.ajax({
+                    contentType: "application/json; charset=UTF-8",
+                    method: "POST",
+                    url: "email.php",
+                    data: JSON.stringify(data),
+                success: function(data, textStatus, jXHR) {
+                    console.log("funzione chiamata quando la chiamata ha successo (response 200)", data, textStatus, jXHR);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log("funzione chiamata quando la chiamata fallisce", jqXHR, textStatus, errorThrown);  
+                }
+                })
+            });
+        })
+
+        
     </script>
 </body>
 
