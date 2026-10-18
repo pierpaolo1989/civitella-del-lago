@@ -2413,9 +2413,9 @@
                                     id="gb"></span></span></span>
 
                     </div>
-                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2">
+                    <h3 class="mbr-fonts-style mbr-section-title mbr-light display-2 mainTitle">
                         Storia</h3>
-                    <p class="mbr-text mbr-fonts-style display-7 justify">
+                    <p class="mbr-text mbr-fonts-style display-7 justify" id = "firstPar">
                         Civitella del Lago sorge nelle vicinanze del luogo in cui i Romani edificarono la città di
                         Vindinio dei Bindi, una zona densamente popolata con un’economia basata sull’agricoltura, i cui
                         prodotti raggiungevano Roma attraverso il Tevere. In seguito il territorio prese il nome di
@@ -2427,8 +2427,8 @@
                         Massa si separò da Todi ed entrò sotto la giurisdizione di Baschi. La costruzione del lago
                         artificiale di <strong>Corbara</strong> nel 1962 cambiò radicalmente i panorami della zona e
                         l’insediamento prese il nome attuale di Civitella del Lago.
-
-                    <h1>Luoghi di interesse</h1>
+                    <hr>
+                    <h1 class="display-2">Luoghi di interesse</h1>
                     <ul>
                         <li><strong>Arco di Diomede</strong>: bellissimo arco rinascimentale che rappresenta uno dei più
                             importanti segni della ristrutturazione cinquecentesca del borgo.</li>
@@ -2453,34 +2453,24 @@
                             pena perdersi per assaporare l'atmosfera autentica e incontaminata.</li>
                     </ul>
                     <br>
-                    <p class="justify">Nei dintorni troviamo <strong>Scoppieto</strong>, un minuscolo insediamento che è
+                    <p class="justify" id = "scoppietoPar">Nei dintorni troviamo <strong>Scoppieto</strong>, un minuscolo insediamento che è
                         un vero e proprio scrigno di storia, le cui radici risalgono al I secolo a.C. Assolutamente da
                         non perdere sono gli scavi archeologici, legati alla fiorente produzione di ceramica della zona
                         durante il periodo romano tra il I sec a.C. e il I sec d.C. Meritano una visita anche il centro
                         storico con la struttura tipica dei piccoli centri umbri di origine medievale, il belvedere e la
                         chiesa di San Pietro, con gli affreschi absidali presenti al suo interno. Quella di Scoppieto è
-                        una zona rinomata per l’agriturismo e la produzione del vino di Baschi.(fonte:
-                        https://wsimag.com/it/viaggi/45805-civitella-del-lago)
+                        una zona rinomata per l’agriturismo e la produzione del vino di Baschi.
+                        <br>
+                        <br>
+                        Fonte: <a href="https://wsimag.com/it/viaggi/45805-civitella-del-lago" target="_blank">https://wsimag.com/it/viaggi/45805-civitella-del-lago</a>
                         <br>
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="footer1 cid-rpfcEPB5FO" id="footer1-c">
-
-        <div class="container">
-            <div class="mbr-col-sm-12 align-center mbr-white">
-                <p class="mbr-text mbr-fonts-style display-7">
-                    © Copyright
-                    <script>document.write(new Date().getFullYear())</script> Civitella del lago - All Rights
-                    Reserved<br>
-                    email: <span class="text-primary"><strong>contatti@civitelladellago.com</strong></span>
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- FOOTER -->
+    <?php include 'footer.php' ?>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
@@ -2490,20 +2480,21 @@
         });
         $('#it').click(function (e) {
             if (typeof (Storage) !== "undefined") {
-                // Store
                 localStorage.setItem("language", "IT");
             }
+            $(".mainTitle").html('Storia');
+            $("#firstPar").html("Civitella del Lago sorge nelle vicinanze del luogo in cui i Romani edificarono la città di Vindinio dei Bindi, una zona densamente popolata con un’economia basata sull’agricoltura, i cui prodotti raggiungevano Roma attraverso il Tevere. In seguito il territorio prese il nome di Massa Bindi, ed era costellato di fortificazioni poste a difesa della città di Todi, tra le quali quella che rappresenta l’inizio dell’attuale Civitella. Nel 1347 il castello subì un attacco da parte delle truppe orvietane del Cardinale Albornoz. Nel 1474 la ricca famiglia guelfa degli Atti riuscì a ottenere la cittadinanza di Todi per gli abitanti, i quali ristrutturarono e ampliarono gran parte del borgo. Durante il periodo napoleonico la zona di Massa si separò da Todi ed entrò sotto la giurisdizione di Baschi. La costruzione del lago artificiale di <strong>Corbara</strong> nel 1962 cambiò radicalmente i panorami della zona e l’insediamento prese il nome attuale di Civitella del Lago.");
+            $("#scoppietoPar").html("Nei dintorni troviamo <strong>Scoppieto</strong> un minuscolo insediamento che è un vero e proprio scrigno di storia, le cui radici risalgono al I secolo a.C. Assolutamente da non perdere sono gli scavi archeologici, legati alla fiorente produzione di ceramica della zona durante il periodo romano tra il I sec a.C. e il I sec d.C. Meritano una visita anche il centro storico con la struttura tipica dei piccoli centri umbri di origine medievale, il belvedere e la chiesa di San Pietro, con gli affreschi absidali presenti al suo interno. Quella di Scoppieto è una zona rinomata per l’agriturismo e la produzione del vino di Baschi.");
         })
         $('#gb').click(function (e) {
             if (typeof (Storage) !== "undefined") {
-                // Store
                 localStorage.setItem("language", "EN");
             }
+            $(".mainTitle").html('History');
+            $("#firstPar").html("Civitella del Lago is located near the place where the Romans built the city of Vindinio dei Bindi, a densely populated area with an economy based on agriculture, whose products reached Rome via the Tiber. Later the territory took the name of Massa Bindi, and was dotted with fortifications placed to defend the city of Todi, including the one that represents the beginning of the current Civitella. In 1347 the castle suffered an attack by the Orvieto troops of Cardinal Albornoz. In 1474 the rich Guelph family of Atti managed to obtain citizenship of Todi for the inhabitants, who renovated and expanded much of the village. During the Napoleonic period the Massa area separated from Todi and came under the jurisdiction of Baschi. The construction of the artificial lake of <strong>Corbara</strong> in 1962 radically changed the views of the area and the settlement took its current name of Civitella del Lago.");
+            $("#scoppietoPar").html("Nearby we find <strong>Scoppieto</strong>, a tiny settlement which is a true treasure chest of history, whose roots date back to the 1st century BC. Absolutely not to be missed are the archaeological excavations, linked to the flourishing ceramic production of the area during the Roman period between the 1st century BC. and the 1st century AD. Also worth a visit are the historic center with the typical structure of small Umbrian towns of medieval origin, the belvedere and the church of San Pietro, with the apse frescoes inside. Scoppieto is an area renowned for agritourism and the production of Baschi wine.");
         })
     </script>
-
-    <input name="cookieData" type="hidden"
-        data-cookie-text="Utilizziamo i cookie per assicurarti una navigazione migliore. Leggi la nostra <a href='privacy.php'>cookie policy</a>.">
     <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)"> <a class="scroll-to-top-arrow"></a>
     </button>
 </body>
