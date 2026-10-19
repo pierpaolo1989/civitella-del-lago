@@ -29,6 +29,9 @@
                     <a class="nav-link link text-primary display-7" href="sport.php">
                         Sport e trekking</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="annunci.php">Annunci</a>
+                </li>
                 <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it">
                         Ovo Pinto</a></li>
             </ul>
@@ -61,6 +64,9 @@
                     <li class="nav-item">
                         <a class="nav-link link text-primary display-7" href="sport.php">
                             Sport e trekking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-primary display-7" href="annunci.php">Annunci</a>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
                             target="blank">
@@ -147,12 +153,10 @@
    </h3>
    <div class="mbr-row mbr-justify-content-center">
       <div class="mbr-col-lg-8 mbr-col-md-12" data-form-type="formoid">
-         <form class="mbr-form mbr-justify-content-center">
-            <div id="submit-success" style="display:none;color:green; text-align:center;margin-bottom:1%;">
-            <?php echo $msg; ?>
+         <form class="mbr-form mbr-justify-content-center" id="contact-form">
+            <div id="submit-success" role="status" aria-live="polite" style="display:none;color:green; text-align:center;margin-bottom:1%;">
             </div>
-            <div id="submit-error" style="display:none;color:red;text-align:center;margin-bottom:1%;">
-            <?php echo $msg; ?>
+            <div id="submit-error" role="alert" style="display:none;color:red;text-align:center;margin-bottom:1%;">
             </div>
             <div class="fieldset">
                <div data-for="form[data][0][1]" class="split-row">
@@ -192,7 +196,7 @@
                <span class="gdpr-block ">Continuando accetti i nostri termini di
                servizio e la nostra Privacy
                Policy.</span>
-               <button class="btn btn-form btn-primary display-4" id="invioMail">INVIA</button>
+               <button class="btn btn-form btn-primary display-4" id="invioMail" type="submit">INVIA</button>
             </div>
          </form>
       </div>
@@ -485,28 +489,37 @@
 
         $(document).ready(function() {
 
-            $("#invioMail").click(function() { 
-                debugger;
-                var nome = $('#nome').val();
-                var email = $("#email_user").val();
-                var messaggio = $("#messaggio_user").val();
-                var data = {
-                    "email_user" : email,
-                    "messaggio_user":  messaggio,
-                    "nome" : nome
-                };
+            $("#contact-form").on("submit", function(event) {
+                event.preventDefault();
+                var form = $(this);
+                var button = $("#invioMail");
+                $("#submit-success, #submit-error").hide().text("");
+                button.prop("disabled", true);
+
                 $.ajax({
-                    contentType: "application/json; charset=UTF-8",
                     method: "POST",
                     url: "email.php",
-                    data: JSON.stringify(data),
-                success: function(data, textStatus, jXHR) {
-                    console.log("funzione chiamata quando la chiamata ha successo (response 200)", data, textStatus, jXHR);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log("funzione chiamata quando la chiamata fallisce", jqXHR, textStatus, errorThrown);  
-                }
+                    data: form.serialize(),
+                    dataType: "json"
                 })
+                .done(function(response) {
+                    if (response.success) {
+                        $("#submit-success").text(response.message).show();
+                        form[0].reset();
+                    } else {
+                        $("#submit-error").text(response.message).show();
+                    }
+                })
+                .fail(function(jqXHR) {
+                    var response = jqXHR.responseJSON;
+                    var message = response && response.message
+                        ? response.message
+                        : "Siamo spiacenti, qualcosa è andato storto. Riprova più tardi.";
+                    $("#submit-error").text(message).show();
+                })
+                .always(function() {
+                    button.prop("disabled", false);
+                });
             });
         })
 

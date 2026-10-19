@@ -8,7 +8,7 @@
         content="borgo, Umbria, Civitella del Lago, Montecchio, Civitella de' pazzi, Scoppieto, Orvieto, Baschi, Todi, Cammino dei Borghi silenti">
     <meta name="author" content="Pierpaolo Di Dato">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
-    <title>Civitella del Lago</title>
+    <title><?php echo isset($page_title) ? htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8') : 'Civitella del Lago'; ?></title>
     <link rel="canonical" href="./">
     <!--Adsense-->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3177939731250769"
@@ -17,6 +17,7 @@
     <link href="vendor/flag/assets/docs.css" rel="stylesheet">
     <link href="vendor/flag/css/flag-icon.css" rel="stylesheet">
     <link href="assets/style/style.css" rel="stylesheet">
+    <link href="assets/style/annunci.css" rel="stylesheet">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;

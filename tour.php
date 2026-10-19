@@ -38,6 +38,7 @@
             <a href="storia.php">Storia</a>
             <a href="servizi.php">Servizi</a>
             <a href="sport.php">Sport e trekking</a>
+            <a href="annunci.php">Annunci</a>
             <a href="http://www.ovopinto.it" target="_blank" rel="noopener noreferrer">Ovo Pinto</a>
             <a class="contact-link" href="index.php#contacts2-5">Contattaci</a>
         </nav>

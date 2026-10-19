@@ -37,12 +37,14 @@ button:focus-visible {
 }
 
 .site-header {
-    min-height: 153px;
-    padding: 8px 16px;
+    position: relative;
+    z-index: 12;
+    min-height: 80px;
+    padding: 0 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
     background: #fff;
 }
 
@@ -68,19 +70,21 @@ button:focus-visible {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: clamp(12px, 2vw, 28px);
+    gap: 0;
     flex-wrap: wrap;
 }
 
 .site-nav a {
-    color: var(--tour-ink);
-    font-size: 0.94rem;
-    font-weight: 600;
+    margin: 0.667em 0.8em;
+    color: var(--tour-primary);
+    font-size: 1.1rem;
+    font-weight: 400;
     text-decoration: none;
 }
 
+.site-nav a:hover,
 .site-nav a[aria-current="page"] {
-    color: var(--tour-green);
+    color: var(--tour-primary-dark);
 }
 
 .site-nav .contact-link {
@@ -327,21 +331,38 @@ button:focus-visible {
 
 .stop-actions a,
 .map-button {
-    padding: 0;
-    color: var(--tour-green);
-    border: 0;
-    background: none;
+    color: var(--tour-primary);
     font: inherit;
     font-size: 0.83rem;
     font-weight: 700;
     text-decoration: none;
+}
+
+.map-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.8rem;
+    color: #fff;
+    border: 1px solid var(--tour-primary);
+    border-radius: 0;
+    background: var(--tour-primary);
+    letter-spacing: 1px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .stop-actions a:hover,
 .map-button:hover {
-    color: var(--tour-green-dark);
+    color: var(--tour-primary-dark);
     text-decoration: underline;
+}
+
+.map-button:hover {
+    color: #fff;
+    border-color: var(--tour-primary-dark);
+    background: var(--tour-primary-dark);
+    text-decoration: none;
 }
 
 .stop-number-icon {
@@ -415,6 +436,8 @@ button:focus-visible {
 .footer1 p {
     margin: 0;
     color: inherit;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .footer1 .text-primary {
@@ -423,11 +446,11 @@ button:focus-visible {
 
 @media (max-width: 991px) {
     .site-header {
-        min-height: 153px;
+        min-height: 80px;
         align-items: center;
         flex-direction: row;
         gap: 0;
-        padding: 8px 16px;
+        padding: 0 16px;
     }
 
     .site-logo img {
@@ -501,9 +524,10 @@ button:focus-visible {
     }
 
     .site-nav a {
+        margin: 0;
         padding: 14px 4px;
         border-bottom: 1px solid var(--tour-line);
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .site-nav .contact-link {
