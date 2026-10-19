@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section class="community-section community-auth-section">
         <div class="community-container community-narrow">
             <div class="community-form-card">
-                <p class="community-eyebrow">Benvenuto nella comunità</p>
+                <p class="community-eyebrow">Benvenuto nella community</p>
                 <h1>Crea il tuo account</h1>
                 <p>Registrati per pubblicare annunci e seguire le novità della zona.</p>
                 <?php if ($error !== ''): ?><p class="community-alert" role="alert"><?php echo community_escape($error); ?></p><?php endif; ?>
