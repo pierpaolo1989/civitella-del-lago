@@ -2424,6 +2424,14 @@
 
                 <h3>Raccolta di Dati Personali</h3>
                 <p style="text-align:justify;">
+                    Per la bacheca di annunci, la registrazione raccoglie nome, indirizzo email e password; la password
+                    viene conservata sotto forma di hash. Per ogni annuncio l'utente può inserire categoria, titolo,
+                    località e descrizione. L'indirizzo email di contatto è facoltativo e viene mostrato pubblicamente
+                    solo quando l'utente lo aggiunge esplicitamente all'annuncio. Gli annunci sono controllati da un
+                    amministratore prima della pubblicazione. Per richieste relative ai dati o alla cancellazione
+                    dell'account, contattare contatti@civitelladellago.com.
+                </p>
+                <p style="text-align:justify;">
                     Dati personali significa qualsiasi informazione che possa essere impiegata per identificare un
                     individuo, una società od altro ente. A titolo puramente esemplificativo e non esaustivo viene
                     raccolto ad esempio il nome ed il cognome, l'indirizzo di posta elettronica (e-mail), l'indirizzo,

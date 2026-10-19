@@ -2333,6 +2333,9 @@
                     <a class="nav-link link text-primary display-7" href="sport.php">
                         Sport e trekking</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="annunci.php">Annunci</a>
+                </li>
                 <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
                         target="blank">
                         Ovo Pinto</a></li>
@@ -2364,6 +2367,9 @@
                     <li class="nav-item">
                         <a class="nav-link link text-primary display-7" href="sport.php">
                             Sport e trekking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-primary display-7" href="annunci.php">Annunci</a>
                     </li>
                     <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it"
                             target="blank">
