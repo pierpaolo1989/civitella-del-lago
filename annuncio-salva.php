@@ -8,6 +8,7 @@ if (!community_csrf_is_valid()) {
     exit('La richiesta è scaduta. Ricarica la pagina e riprova.');
 }
 
+
 $title = isset($_POST['title']) && is_string($_POST['title']) ? trim($_POST['title']) : '';
 $category = isset($_POST['category']) && is_string($_POST['category']) ? $_POST['category'] : '';
 $location = isset($_POST['location']) && is_string($_POST['location']) ? $_POST['location'] : '';
