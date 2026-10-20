@@ -15,7 +15,7 @@
     <link rel='shortcut icon' type='image/x-icon' href='/assets/images/favicon.ico' />
     <link href="assets/style/style.css" rel="stylesheet">
     <title>Civitella del Lago</title>
-    <link rel="canonical" href="servizi.php">
+    <link rel="canonical" href="storia.php">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
