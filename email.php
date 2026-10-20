@@ -37,6 +37,13 @@ if (!is_file($autoload)) {
 
 require_once $autoload;
 
+$smtpUsername = getenv('SMTP_USERNAME');
+$smtpPassword = getenv('SMTP_PASSWORD');
+if ($smtpUsername === false || $smtpUsername === '' || $smtpPassword === false || $smtpPassword === '') {
+    error_log('Contact form email could not be sent: SMTP credentials are not configured.');
+    respondToContactForm(500, false, 'Siamo spiacenti, qualcosa è andato storto. Riprova più tardi.');
+}
+
 $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'smtp.hostinger.com';
@@ -44,9 +51,9 @@ $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPDebug = 0;
 $mail->SMTPAuth = true;
-$mail->Username = 'contatti@civitelladellago.com';
-$mail->Password = 'Pippi1989NA?';
-$mail->setFrom('contatti@civitelladellago.com', 'Civitella del lago');
+$mail->Username = $smtpUsername;
+$mail->Password = $smtpPassword;
+$mail->setFrom($smtpUsername, 'Civitella del lago');
 $mail->addAddress('pierpaolo.pdd@gmail.com', 'Receiver Name');
 $mail->addReplyTo($email, $name);
 $mail->Subject = 'Civitella del Lago contact form';
