@@ -347,13 +347,33 @@
 .community-form .community-consent input {
     position: static;
     z-index: auto;
+    display: block;
     width: 18px;
     min-width: 18px;
+    max-width: 18px;
+    height: 18px;
     min-height: 18px;
+    flex: 0 0 18px;
     margin: 2px 0 0;
     padding: 0;
     opacity: 1;
-    accent-color: #2e5b45;
+    appearance: none;
+    border: 1px solid #8b978e;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.community-form .community-consent input:checked {
+    border-color: #2e5b45;
+    background: #2e5b45
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8 3 3 7-7' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E")
+        center / 14px 14px no-repeat;
+}
+
+.community-form .community-consent input:focus-visible {
+    outline: 2px solid rgba(78, 162, 227, 0.55);
+    outline-offset: 2px;
 }
 
 .community-form .community-consent a {
