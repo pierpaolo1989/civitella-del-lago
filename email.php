@@ -29,6 +29,7 @@ if ($name === '' || $message === '' || filter_var($email, FILTER_VALIDATE_EMAIL)
     respondToContactForm(400, false, 'Controlla nome, email e messaggio e riprova.');
 }
 
+
 $autoload = __DIR__ . '/vendor/autoload.php';
 if (!is_file($autoload)) {
     error_log('Contact form email could not be sent: PHPMailer autoloader not found.');
