@@ -345,11 +345,14 @@
 }
 
 .community-form .community-consent input {
+    position: static;
+    z-index: auto;
     width: 18px;
     min-width: 18px;
     min-height: 18px;
     margin: 2px 0 0;
     padding: 0;
+    opacity: 1;
     accent-color: #2e5b45;
 }
 

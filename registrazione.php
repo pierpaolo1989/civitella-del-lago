@@ -58,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html amp lang="it">
 <?php include __DIR__ . '/header.php'; ?>
 <body>
+<?php $showNavigationAccount = false; ?>
 <?php include __DIR__ . '/includes/site-navigation.php'; ?>
 <main class="community-main">
     <section class="community-section community-auth-section">
@@ -79,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input id="password_confirm" name="password_confirm" type="password" autocomplete="new-password" minlength="12" maxlength="72" required>
                     <label class="community-consent">
                         <input name="privacy_consent" type="checkbox" value="1" required <?php echo $privacyAccepted ? 'checked' : ''; ?>>
-                        Ho letto l’<a href="informativa.php" target="_blank" rel="noopener noreferrer">informativa privacy</a> e comprendo che l’email di contatto di un annuncio sarà pubblica solo se la inserisco esplicitamente.
+                        Dichiaro di aver letto l’<a href="informativa.php" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a>. L’indirizzo email sarà visibile negli annunci solo se scelgo di inserirlo nel testo.
                     </label>
                     <button class="community-button" type="submit">Registrati</button>
                 </form>

@@ -15,9 +15,11 @@ $navigationUser = community_user();
             <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it" target="_blank" rel="noopener noreferrer">Ovo Pinto</a></li>
         </ul>
         <div class="navbar-buttons mbr-section-btn">
-            <a class="btn btn-sm btn-primary display-7" href="<?php echo $navigationUser ? 'dashboard.php' : 'login.php'; ?>">
-                <?php echo $navigationUser ? 'Area utente' : 'Accedi'; ?>
-            </a>
+            <?php if (!isset($showNavigationAccount) || $showNavigationAccount): ?>
+                <a class="btn btn-sm btn-primary display-7" href="<?php echo $navigationUser ? 'dashboard.php' : 'login.php'; ?>">
+                    <?php echo $navigationUser ? 'Area utente' : 'Accedi'; ?>
+                </a>
+            <?php endif; ?>
             <a class="btn btn-sm btn-primary display-7" href="index.php#contacts2-5">Contattaci</a>
         </div>
     </div>
@@ -36,9 +38,11 @@ $navigationUser = community_user();
                 <li class="nav-item"><a class="nav-link link text-primary display-7" href="http://www.ovopinto.it" target="_blank" rel="noopener noreferrer">Ovo Pinto</a></li>
             </ul>
             <div class="navbar-buttons mbr-section-btn">
-                <a class="btn btn-sm btn-primary display-7" href="<?php echo $navigationUser ? 'dashboard.php' : 'login.php'; ?>">
-                    <?php echo $navigationUser ? 'Area utente' : 'Accedi'; ?>
-                </a>
+                <?php if (!isset($showNavigationAccount) || $showNavigationAccount): ?>
+                    <a class="btn btn-sm btn-primary display-7" href="<?php echo $navigationUser ? 'dashboard.php' : 'login.php'; ?>">
+                        <?php echo $navigationUser ? 'Area utente' : 'Accedi'; ?>
+                    </a>
+                <?php endif; ?>
                 <a class="btn btn-sm btn-primary display-7" href="index.php#contacts2-5">Contattaci</a>
             </div>
         </div>
