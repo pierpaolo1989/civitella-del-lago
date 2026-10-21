@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html amp lang="it">
 <?php include __DIR__ . '/header.php'; ?>
 <body>
+<?php $showNavigationAccount = false; ?>
 <?php include __DIR__ . '/includes/site-navigation.php'; ?>
 <main class="community-main">
     <section class="community-section community-auth-section">
