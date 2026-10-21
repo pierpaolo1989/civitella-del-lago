@@ -5,6 +5,7 @@ $page_title = 'Crea un account | Civitella del Lago';
 $error = '';
 $name = '';
 $email = '';
+$privacyAccepted = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = isset($_POST['name']) && is_string($_POST['name']) ? trim($_POST['name']) : '';
@@ -80,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input id="password_confirm" name="password_confirm" type="password" autocomplete="new-password" minlength="12" maxlength="72" required>
                     <label class="community-consent">
                         <input name="privacy_consent" type="checkbox" value="1" required <?php echo $privacyAccepted ? 'checked' : ''; ?>>
-                        Dichiaro di aver letto l’<a href="informativa.php" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a>. L’indirizzo email sarà visibile negli annunci solo se scelgo di inserirlo nel testo.
+                        <span>Confermo di aver letto l’<a href="informativa.php" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a>. L’email sarà visibile negli annunci solo se la inserisco nel testo.</span>
                     </label>
                     <button class="community-button" type="submit">Registrati</button>
                 </form>

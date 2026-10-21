@@ -344,6 +344,12 @@
     line-height: 1.5;
 }
 
+.community-form .community-consent > span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 .community-form .community-consent input {
     position: static;
     z-index: auto;
@@ -365,8 +371,8 @@
 }
 
 .community-form .community-consent input:checked {
-    border-color: #2e5b45;
-    background: #2e5b45
+    border-color: #4ea2e3;
+    background: #4ea2e3
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8 3 3 7-7' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E")
         center / 14px 14px no-repeat;
 }
